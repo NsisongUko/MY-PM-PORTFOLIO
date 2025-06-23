@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSISONG UKO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #ff3333;
+            --dark-black: #000000;
+            --pure-white: #ffffff;
+            --dark-gray: #1a1a1a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--pure-white);
+            background-color: var(--dark-black);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            color: var(--primary-red);
+        }
+        
+        p, li {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--dark-black);
+            border-bottom: 1px solid var(--primary-red);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: var(--primary-red);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--pure-white);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary-red);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background-color: var(--dark-black);
+            text-align: center;
+            border-bottom: 1px solid var(--primary-red);
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: var(--dark-black);
+            border-bottom: 1px solid var(--primary-red);
+        }
+        
+        .about-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+        flex: 1;
+        max-height: 500px;       
+        min-height: 300px;       
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid #ff3333;
+        }
+        
+        .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        }
+        
+        /* Capabilities */
+        .capabilities {
+            padding: 100px 0;
+            background-color: var(--dark-black);
+            border-bottom: 1px solid var(--primary-red);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 48px;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .capability-card {
+            background: var(--dark-gray);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-red);
+        }
+        
+        .capability-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+     
+        .project-info a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: var(--primary-red);
+    color: var(--dark-black);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.project-info a:hover {
+    background-color: var(--pure-white);
+}
+        /* Projects */
+        .projects {
+            padding: 100px 0;
+            background-color: var(--dark-black);
+            border-bottom: 1px solid var(--primary-red);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .project-card {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--primary-red);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-info {
+            padding: 25px;
+            background: var(--dark-gray);
+        }
+        
+        .project-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+
+            
+        }
+        
+        /* Contact */
+        .contact-section {
+  background: #000;
+  padding: 60px 20px;
+  border-top: 1px solid #ff3333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: #1a1a1a;
+  border: 1px solid #ff3333;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background: #ff3333;
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-black);
+            color: var(--pure-white);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid var(--primary-red);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: var(--pure-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-red);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">NSISONG UKO</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">A Bit About My Story</a></li>
+                    <li><a href="#capabilities">My Capabilities</a></li>
+                    <li><a href="#projects">Ideas I've Brought to Life</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>HELLO, I'M NSISONG UKO</h1>
+            <p>A results-driven Product Manager with a passion for creating user-centric digital products that bridge business objectives with technical solutions. I specialize in transforming complex problems into intuitive, impactful experiences.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">A BIT ABOUT MY STORY</h2>
+                    <p>With 3 years of experience in product management, I've led cross-functional teams to deliver successful digital products across various industries. My approach combines strategic thinking with hands-on execution to drive product excellence.</p>
+                    <p>I believe in data-informed decision making, but never lose sight of the human element in product design. My expertise spans the entire product lifecycle from ideation to launch and iteration.</p>
+                    <p>When I'm not optimizing user flows or analyzing metrics, you can find melearning something new, which helps me maintain a fresh perspective on problem-solving.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://scontent.fabb1-1.fna.fbcdn.net/v/t39.30808-6/395996905_3029084843892967_8699959606424306161_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEnB1lOw_Tv6-9c8gALnbtOudSIID89v5S51IggPz2_lM2Y7mqd7TQb_8kq4kJ2ODJjSxCZ9MQa7faiKBqbFplM&_nc_ohc=h6tCQPyHXasQ7kNvwEfYPxg&_nc_oc=AdmuWNkBShnZf_yjfGu8oq6r6TR5jhAbV2QKQp8j7Tzw_Ld86NAWKmuqKsvIWDRYpmk&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&_nc_gid=yvdvhDiFit37nDb4mKSZDA&oh=00_AfPBx5rS2rOdTjx6Ofp43u5mWav3010CepTdohUe_HUajA&oe=6854CA6D" alt="Profile Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <h2 class="section-title">MY CAPABILITIES</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <h3>Product Strategy</h3>
+                    <p>Developing comprehensive product visions and roadmaps that align with business goals and market opportunities. Creating measurable success metrics and KPIs to track product performance.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>User Research</h3>
+                    <p>Conducting qualitative and quantitative research including interviews, surveys, and usability testing to uncover user needs and pain points. Translating insights into product requirements.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>Agile Development</h3>
+                    <p>Leading cross-functional teams through iterative development cycles. Facilitating sprint planning, standups, and retrospectives to maintain team velocity and product quality.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>Data Analysis</h3>
+                    <p>Leveraging analytics tools to monitor product performance, identify trends, and inform decision-making. Implementing A/B tests to optimize user experience and conversion.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>Stakeholder Management</h3>
+                    <p>Aligning executives, engineers, designers, and customers on product direction. Communicating effectively across all levels of the organization to build consensus.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>UX Design</h3>
+                    <p>Collaborating with designers to create intuitive, accessible user experiences. Developing user flows, wireframes, and prototypes to validate design concepts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">IDEAS I'VE BROUGHT TO LIFE</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/485740726_647788018009805_7404487099091632752_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHV0BoYTkgF8crKuedsZc0MVt3SLFe_pa9W3dIsV7-lrx_PD5RouE8QYtRZnZRs951cpHsPwXoKdZB5pt596geC&_nc_ohc=kEYJD8xLSBoQ7kNvwH2z1YX&_nc_oc=Adn3HalrTv4i4hQaP21he-q1A43Dhvc4hMofm80KtLSYs9Rm2qZDW1Vy5xPViDdK-44&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=080lT-tRHwotLBsx98TmLg&oh=00_AfPLe8IFKKbxCZJSn3hMjYFnbfEOTjUnlJG3SAjl4UF2fQ&oe=6854BC80" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Ekocrib</h3>
+                        <p>As Product Manager at Ekocrib, I led the launch of a real estate platform that attracted over 200 early users in Lagos within two weeks. I drove data-informed decisions through A/B testing, achieving a 40% boost in homepage conversions. By developing a detailed PRD and clear roadmap, I helped reduce product iteration cycles by 35%, ensuring faster, more focused delivery.
+<a href="https://www.ekocrib.com/" target="_blank">View Live Project</a>
+</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/327545252_839584893796761_1466639441305386159_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEqBA1PxcnQSWYtlOAv_iOJU6nuACbiPVZTqe4AJuI9Vu_0H1V3KVt7UHSK7rAFG5wIdKrjGuMapFrjGrsbnXht&_nc_ohc=iVADeFSLOJMQ7kNvwHADMNj&_nc_oc=AdnWwpoZHE0OpwbxiLi9v-5qv7sev5NmrqzroU3Hrwv3GhCSiIf0rSMrUScAfDZZK-c&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=1UXjbxJR9tP0VdFp7cD2zA&oh=00_AfMC8f0NkPl4k_c9jgovXs5ZmWDd9d-7zzEFnU43kTaF2Q&oe=6854C1B8" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>HerTechTrail</h3>
+                        <p>At HerTechTrail, I co-led the redesign of the academy website, increasing learner engagement by 60%, and managed LMS development sprints. I mentored over 200 product interns, with 5 moving into full-time product roles. Through user research with 50+ learners, I helped cut drop-off rates by 35%. I also crafted a feature roadmap and sprint plans that sped up the TechHerFest24 platform launch by 3 weeks and boosted event registrations by 40%.
+
+</p>
+                    <a href="https://events.hertechtrail.org/" target="_blank">View Live Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://scontent.fabb1-1.fna.fbcdn.net/v/t1.15752-9/494824801_642545245503850_1431225882462541983_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFGO8qsxIbtxlhSvj2wiacYWhfQXBOw5RBaF9BcE7DlEHa9qW0wkYWL0pbRpj0UlJGtHxB14kpuaGJ-MMANsU2l&_nc_ohc=ByqPbMkZSnAQ7kNvwGXHwN8&_nc_oc=AdmcP6ogz_2AWLfImj4BjYj2RlD8w6PSXTPDAQoCXfLNrWihm6YL48IG69cASDta8cQ&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&oh=03_Q7cD2gHsez6t9vs8MTxc-IIm_uzf5RWjVu21ysmzAeAb9ji5-g&oe=687673C2" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>SPORTVERSE</h3>
+                        <p>Led the development of Sportverse, a virtual sports betting app offering real odds, fantasy leagues, trivia, and prize systems — delivered the MVP in under 90 days. Defined the product scope and roadmap with a focus on non-monetary betting and competitive gameplay. Worked closely with designers and engineers to build core features that brought fantasy sports, trivia challenges, and prize rewards to life.</p>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.zuvo.sportverse%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExNXNLeWs4blJKZFZIZ0RqbgEeIrVPxeo0JYd-aqRCNri6n9-EceGYudBDl64Tp7W2VsPYSQjVePGCxECEyqg_aem_l_tTSnUT7EPrsCHdhJ1-VQ&h=AT1GxnecO_ARJaWA1JwL9RkU9uEeTqCS9F-N8XUKin_t93PPzETcIjal52wl71T0YdJIJJGFFWrGbIO1epxeR-lleKeIhwj5gJbQ5480WVlzdCuQPS0JJqo5h744bT67oR7vJA" target="_blank">View Live Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+   <div class="container">
+      <div class="section-title">Let's Build Something Great Together</h2>
+      <div class="contact-container">
+         
+         <form name="contact" method="POST" netlify class="contact-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+</section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">GitHub</a>
+                </div>
+                <p>© 2025 Nsisong Uko. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
