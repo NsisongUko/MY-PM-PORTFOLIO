@@ -8,10 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-red: #ff3333;
-            --dark-black: #000000;
-            --pure-white: #ffffff;
-            --dark-gray: #1a1a1a;
+            --primary-orange: #F4A261;
+            --dark-black: #1C2526;
+            --pure-white: #FFFFFF;
+            --light-gray: #A9A9A9;
+            --dark-gray: #2A3A3C;
         }
 
         * {
@@ -32,12 +33,17 @@
             font-family: 'Bebas Neue', sans-serif;
             letter-spacing: 1.5px;
             font-weight: 400;
-            color: var(--primary-red);
+            color: var(--primary-orange);
         }
 
         p, li {
             text-align: justify;
             text-justify: inter-word;
+            color: var(--pure-white);
+        }
+
+        .secondary-text {
+            color: var(--light-gray);
         }
 
         .container {
@@ -50,7 +56,6 @@
         /* Header */
         header {
             background-color: var(--dark-black);
-            border-bottom: 1px solid var(--primary-red);
             position: fixed;
             width: 100%;
             top: 0;
@@ -67,7 +72,7 @@
         .logo {
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(24px, 5vw, 28px);
-            color: var(--primary-red);
+            color: var(--primary-orange);
         }
 
         nav {
@@ -90,7 +95,7 @@
         }
 
         nav a:hover {
-            color: var(--primary-red);
+            color: var(--primary-orange);
         }
 
         .menu-toggle {
@@ -100,12 +105,45 @@
             cursor: pointer;
         }
 
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-orange);
+            color: var(--dark-black);
+            border: 2px solid var(--primary-orange);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary-orange);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-orange);
+            border: 2px solid var(--primary-orange);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-orange);
+            color: var(--dark-black);
+        }
+
         /* Hero Section */
         .hero {
-            padding: clamp(100px, 20vh, 150px) 0 clamp(50px, 10vh, 80px);
+            padding: clamp(100px, 15vh, 120px) 0 clamp(40px, 8vh, 60px);
             background-color: var(--dark-black);
             text-align: center;
-            border-bottom: 1px solid var(--primary-red);
         }
 
         .hero h1 {
@@ -120,39 +158,9 @@
             font-size: clamp(16px, 3vw, 18px);
         }
 
-        /* About Section */
-        .about {
-            padding: clamp(50px, 10vh, 80px) 0;
-            background-color: var(--dark-black);
-            border-bottom: 1px solid var(--primary-red);
-        }
-
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .about-image {
-    width: 100%;
-    /* max-height: 400px; Remove or adjust this */
-    border-radius: 8px;
-    overflow: hidden;
-    border: 2px solid var(--primary-red);
-}
-
-.about-image img {
-    width: 100%;
-    height: auto; /* Change to auto to maintain aspect ratio */
-    object-fit: contain; /* Use contain instead of cover to show the whole image */
-    object-position: center; /* Keeps the image centered */
-}
-
-        /* Capabilities */
-        .capabilities {
-            padding: clamp(50px, 10vh, 80px) 0;
-            background-color: var(--dark-black);
-            border-bottom: 1px solid var(--primary-red);
+        /* Sections */
+        .section {
+            padding: clamp(60px, 10vh, 80px) 0;
         }
 
         .section-title {
@@ -161,6 +169,65 @@
             font-size: clamp(32px, 6vw, 42px);
         }
 
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary-orange);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .about-text {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* Impact Numbers */
+        .impact-numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .impact-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background: var(--dark-gray);
+        }
+
+        .impact-number {
+            font-size: clamp(36px, 6vw, 48px);
+            font-weight: bold;
+            color: var(--primary-orange);
+            margin-bottom: 10px;
+        }
+
+        .impact-label {
+            font-size: clamp(16px, 3vw, 18px);
+            color: var(--light-gray);
+        }
+
+        /* Capabilities */
         .capabilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -171,7 +238,7 @@
             background: var(--dark-gray);
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid var(--primary-red);
+            border-left: 4px solid var(--primary-orange);
         }
 
         .capability-card h3 {
@@ -179,13 +246,36 @@
             margin-bottom: 10px;
         }
 
-        /* Projects */
-        .projects {
-            padding: clamp(50px, 10vh, 80px) 0;
-            background-color: var(--dark-black);
-            border-bottom: 1px solid var(--primary-red);
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
+        .testimonial-card {
+            background: var(--dark-gray);
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-orange);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+        }
+
+        .testimonial-role {
+            color: var(--light-gray);
+            font-size: 0.9em;
+        }
+
+        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -195,7 +285,7 @@
         .project-card {
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid var(--primary-red);
+            border: 1px solid var(--primary-orange);
             transition: transform 0.3s;
         }
 
@@ -233,7 +323,7 @@
             display: inline-block;
             margin-top: 10px;
             padding: 8px 16px;
-            background-color: var(--primary-red);
+            background-color: var(--primary-orange);
             color: var(--dark-black);
             text-decoration: none;
             border-radius: 4px;
@@ -247,12 +337,6 @@
         }
 
         /* Contact */
-        .contact-section {
-            background: var(--dark-black);
-            padding: clamp(40px, 8vh, 60px) 15px;
-            border-top: 1px solid var(--primary-red);
-        }
-
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -274,7 +358,7 @@
             width: 100%;
             padding: 10px;
             background: var(--dark-gray);
-            border: 1px solid var(--primary-red);
+            border: 1px solid var(--primary-orange);
             color: var(--pure-white);
             border-radius: 4px;
             font-size: clamp(14px, 3vw, 16px);
@@ -286,7 +370,7 @@
         }
 
         .submit-btn {
-            background: var(--primary-red);
+            background: var(--primary-orange);
             color: var(--dark-black);
             padding: 10px 20px;
             border: none;
@@ -305,9 +389,8 @@
         footer {
             background-color: var(--dark-black);
             color: var(--pure-white);
-            padding: 20px 0;
+            padding: 40px 0;
             text-align: center;
-            border-top: 1px solid var(--primary-red);
         }
 
         .footer-content {
@@ -330,7 +413,7 @@
         }
 
         .social-links a:hover {
-            color: var(--primary-red);
+            color: var(--primary-orange);
         }
 
         /* Mobile Navigation */
@@ -344,7 +427,6 @@
                 width: 100%;
                 background: var(--dark-black);
                 padding: 20px;
-                border-top: 1px solid var(--primary-red);
             }
 
             nav ul.active {
@@ -355,12 +437,9 @@
                 display: block;
             }
 
-            .about-content {
-                flex-direction: column;
-            }
-
             .about-image {
-                max-height: 300px;
+                width: 250px;
+                height: 250px;
             }
         }
 
@@ -373,16 +452,22 @@
                 font-size: clamp(24px, 6vw, 32px);
             }
 
-            .capabilities-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .capabilities-grid,
+            .impact-numbers,
+            .testimonials,
             .projects-grid {
                 grid-template-columns: 1fr;
             }
 
             .project-image {
                 height: 150px;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -397,7 +482,9 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#impact">Impact</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -413,24 +500,27 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-image">
-                    <img src="images/PROFILE.jpg" alt="Nsisong - Product Manager" loading="lazy">
-                </div>
+    <section id="about" class="section">
         <div class="container">
             <div class="about-content">
+                <div class="about-image">
+                    <img src="images/PROFILE.jpg" alt="Nsisong - Product Manager" loading="lazy">
+                </div>
                 <div class="about-text">
                     <h2 class="section-title">A BIT ABOUT MY STORY</h2>
                     <p>With 3 years of experience in product management, I've led cross-functional teams to deliver successful digital products across various industries. My approach combines strategic thinking with hands-on execution to drive product excellence.</p>
                     <p>I believe in data-informed decision making, but never lose sight of the human element in product design. My expertise spans the entire product lifecycle from ideation to launch and iteration.</p>
                     <p>When I'm not optimizing user flows or analyzing metrics, you can find me learning something new, which helps me maintain a fresh perspective on problem-solving.</p>
+                    
+                    <a href="#" class="btn btn-primary">Download Resume</a>
+                    <a href="mailto:your.email@example.com" class="btn btn-secondary">Let's Walk Together</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Capabilities -->
-    <section id="capabilities" class="capabilities">
+    <section id="capabilities" class="section">
         <div class="container">
             <h2 class="section-title">MY CAPABILITIES</h2>
             <div class="capabilities-grid">
@@ -462,8 +552,33 @@
         </div>
     </section>
 
+    <!-- Impact Numbers -->
+    <section id="impact" class="section">
+        <div class="container">
+            <h2 class="section-title">IMPACT BY NUMBERS</h2>
+            <div class="impact-numbers">
+                <div class="impact-card">
+                    <div class="impact-number">3+</div>
+                    <div class="impact-label">Years Experience</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">15+</div>
+                    <div class="impact-label">Products Launched</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">200+</div>
+                    <div class="impact-label">Users Impacted</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">40%</div>
+                    <div class="impact-label">Conversion Boost</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">IDEAS I'VE BROUGHT TO LIFE</h2>
             <div class="projects-grid">
@@ -501,8 +616,32 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title">WHAT PARTNERS ARE SAYING</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Nsisong's product leadership was instrumental in our platform's success. Her ability to translate complex requirements into actionable features was remarkable."</p>
+                    <div class="testimonial-author">John Doe</div>
+                    <div class="testimonial-role">CEO, Tech Company</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Working with Nsisong was a game-changer for our product. Her user-centric approach and data-driven decisions significantly improved our metrics."</p>
+                    <div class="testimonial-author">Jane Smith</div>
+                    <div class="testimonial-role">Product Director, Startup</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Nsisong brought clarity and direction to our product roadmap. Her strategic thinking and execution skills are truly exceptional."</p>
+                    <div class="testimonial-author">Michael Johnson</div>
+                    <div class="testimonial-role">CTO, Digital Agency</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Let's Build Something Great Together</h2>
             <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
@@ -578,14 +717,14 @@
             });
         });
     </script>
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="hidden" name="form-name" value="contact">
-      <p class="hidden">
-        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-      </p>
-      <input type="text" name="name" required>
-      <input type="email" name="email" required>
-      <textarea name="message" required></textarea>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+        <input type="text" name="name" required>
+        <input type="email" name="email" required>
+        <textarea name="message" required></textarea>
     </form>
 </body>
 </html>
