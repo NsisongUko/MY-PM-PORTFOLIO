@@ -37,7 +37,7 @@
         }
 
         p, li {
-            text-align: justify;
+            text-align:left;
             text-justify: inter-word;
             color: var(--pure-white);
             overflow-wrap: break-word;
@@ -146,16 +146,17 @@
 
         /* Hero Section */
         .hero {
-            padding: clamp(50px, 8vh, 80px) 0 clamp(15px, 4vh, 40px);
-            background-color: var(--dark-black);
-            text-align: center;
-        }
+    padding: clamp(80px, 10vh, 120px) 0 clamp(15px, 4vh, 40px); /* Increased top padding */
+    background-color: var(--dark-black);
+    text-align: center;
+}
 
-        .hero h1 {
-            font-size: clamp(28px, 8vw, 54px);
-            margin-bottom: 10px;
-            line-height: 1.1;
-        }
+.hero h1 {
+    font-size: clamp(28px, 8vw, 54px);
+    margin-bottom: 10px;
+    line-height: 1.1;
+    padding-top: 20px; /* Added padding above the text to bring it down */
+}
 
         .hero p {
             max-width: 90%;
