@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProdFuse - Product Management Services & Mentorship</title>
+    <title>Prodort Spark - Product Management Services & Mentorship</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-orange: #F4A261;
+            --primary-orange: #ff4f00;
             --dark-black: #1C2526;
             --pure-white: #FFFFFF;
             --light-gray: #A9A9A9;
@@ -59,7 +59,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
+            text-transform: capitalize;
             letter-spacing: 1.5px;
             text-decoration: none;
         }
@@ -116,6 +116,30 @@
         .section {
             padding: clamp(30px, 8vw, 60px) 0;
             background-color: var(--dark-black);
+        }
+
+        #about {
+            background-image: url('images/prodortspark\ about.jpg'); /* Replace with your actual image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(28, 37, 38, 0.7); /* Dark overlay for readability */
+            z-index: 0;
+        }
+
+        #about .container {
+            position: relative;
+            z-index: 1;
         }
 
         .section-title {
@@ -176,6 +200,13 @@
             color: var(--pure-white);
         }
 
+        .card .testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
         .btn {
             display: inline-block;
             padding: clamp(8px, 2vw, 12px) clamp(20px, 4vw, 30px);
@@ -192,7 +223,7 @@
         }
 
         .btn:hover {
-            background-color: #D68C45;
+            background-color: #cc3f00; /* Slightly darker shade of #ff4f00 */
             transform: translateY(-2px);
         }
 
@@ -201,7 +232,7 @@
         }
 
         .btn-discovery:hover {
-            background-color: #D68C45;
+            background-color: #cc3f00;
         }
 
         .whatsapp-btn {
@@ -305,6 +336,8 @@
                 padding: clamp(6px, 2vw, 10px) clamp(15px, 3vw, 20px);
                 font-size: clamp(0.7rem, 2.5vw, 0.9rem);
             }
+
+            
         }
     </style>
 </head>
@@ -312,11 +345,11 @@
     <header>
         <div class="container">
             <div class="nav">
-                <div class="logo">ProdFuse</div>
+                <div class="logo">Prodort Spark</div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="#product-services">Product Services</a></li>
-                    <li><a href="#mentorship-services">Mentorship</a></li>
+                    <li><a href="#mentorship-services">Mentorship/Coaching</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -329,7 +362,7 @@
 
     <section class="hero" id="hero">
         <div class="container">
-            <h1>Welcome to ProdFuse</h1>
+            <h1>Welcome to Prodort Spark</h1>
             <p>Empowering your product journey with expert services and personalized mentorship to transition into Product Management with confidence.</p>
         </div>
     </section>
@@ -337,8 +370,9 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Us</h2>
-                <p>ProdFuse is your trusted partner in navigating the world of Product Management. Founded by industry experts who have transitioned from non-tech backgrounds, we understand the challenges and opportunities of this field. Our mission is to provide tailored solutions and mentorship to help individuals and businesses build successful products with clarity and innovation. With years of experience in product strategy, execution, and coaching, we’re here to guide you every step of the way.</p>
+                <h2>About Prodort Spark</h2>
+                <p>Prodort Spark is your trusted partner in navigating the world of Product Management. Founded by Nsisong Uko, an agile product manager who transitioned from non-tech background specifically classroom teaching, we understand the challenges and opportunities of this field. </p>
+                <p>Our mission is to provide tailored solutions and mentorship to help individuals and businesses build successful products with clarity and innovation. With years of experience in product strategy, execution, and coaching, we’re here to guide you every step of the way.</p>
         </div>
     </section>
 
@@ -346,19 +380,21 @@
         <div class="container">
             <div class="section-title">
                 <h2>Product Services</h2>
-                <p>Transform your product ideas into reality with our comprehensive services tailored to your unique needs.</p>
+                <p>Every successful product starts with clarity, strategy, and the right execution.</p>
+                <p>At Prodort Spark, we help founders, startups, and businesses transform raw ideas into structured, market-ready products. Whether you’re just starting out or scaling an existing solution, our tailored services will give you clear product direction, professional documentation, and a roadmap that reduces risk and accelerates growth</p> 
+               <p>Choose from our flexible task-based services or unlock the full package at discounted rates.</p>
             </div>
             <div class="cards">
                 <div class="card">
-                    <h3>Core Product Tasks</h3>
+                    <h3>Product Discovery</h3>
                     <ul>
                         <li>Problem Discovery & Validation</li>
                         <li>Customer Personas & Journey Mapping</li>
                         <li>Feature Planning & Prioritization</li>
                         <li>Requirements Documentation (PRDs, User Stories, Acceptance Criteria)</li>
                     </ul>
-                    <div class="price">₦150,000 – ₦250,000 per project</div>
-                    <a href="https://calendly.com/yourusername/20min-discovery-call" class="btn btn-discovery" target="_blank">Book a Free 20 Minutes Discovery Call</a>
+                    <div class="price">₦15,000 per task - Pay ₦50,000 for this package</div>
+                    <a href="https://forms.gle/4T2TCSLZ4rYRXmv38" class="btn btn-discovery" target="_blank">Book Service</a>
                 </div>
                 <div class="card">
                     <h3>Product Strategy & Research</h3>
@@ -366,21 +402,21 @@
                         <li>Product Vision & Strategy (1-pager, north-star metric, KPIs)</li>
                         <li>Competitive & Market Research</li>
                         <li>Roadmap Creation (Quarterly or Project-based)</li>
-                        <li>Workflow/App Flow Mapping</li>
+                        <li>Go-to-Market Strategy (Launch plan, tracking, feedback loop)</li>
                     </ul>
-                    <div class="price">₦200,000 – ₦300,000 per project</div>
-                    <a href="https://calendly.com/yourusername/20min-discovery-call" class="btn btn-discovery" target="_blank">Book a Free 20 Minutes Discovery Call</a>
+                    <div class="price">₦15,000 per task - Pay ₦50,000 for this package</div>
+                    <a href="https://forms.gle/4T2TCSLZ4rYRXmv38" class="btn btn-discovery" target="_blank">Book Service</a>
                 </div>
                 <div class="card">
-                    <h3>Execution & Delivery</h3>
+                    <h3>Design</h3>
                     <ul>
-                        <li>Wireframes (Low/High Fidelity)</li>
-                        <li>Stakeholder Management (Workshops, Alignment Sessions)</li>
-                        <li>Go-to-Market Guidance (Launch plan, tracking, feedback loop)</li>
-                        <li>Consultancy & Advisory (for teams & businesses)</li>
+                        <li>Wireframes (Low Fidelity)</li>
+                        <li>Wireframes (High Fidelity)</li>
+                        <li>Workflow/Process flow Mapping</li>
+                        <li>Userflow Mapping</li>
                     </ul>
-                    <div class="price">₦250,000 – ₦400,000 per project</div>
-                    <a href="https://calendly.com/yourusername/20min-discovery-call" class="btn btn-discovery" target="_blank">Book a Free 20 Minutes Discovery Call</a>
+                    <div class="price">₦20,000 per task - Pay ₦70,000 for this package</div>
+                    <a href="https://forms.gle/4T2TCSLZ4rYRXmv38" class="btn btn-discovery" target="_blank">Book Service</a>
                 </div>
             </div>
         </div>
@@ -390,19 +426,20 @@
         <div class="container">
             <div class="section-title">
                 <h2>Mentorship & Coaching Services</h2>
-                <p>Choose the right path to kickstart your Product Management career with personalized guidance.</p>
+                <p>Your career and skills deserve more than trial and error.</p>
+                <p> We help transitioning and entry level Product Managers gain the clarity, confidence, and hands-on experience they need to grow. Whether you’re an transitioning into tech or product management from another inductry, our mentorship and coaching programs are designed to help you transitioning smoothly.</p>
             </div>
             <div class="cards">
                 <div class="card">
-                    <h3>Starter Mentorship Session</h3>
+                    <h3>Entry Level Mentorship Session</h3>
                     <ul>
-                        <li>One 60-min 1:1 call</li>
-                        <li>Career roadmap (how to move from your current role into PM)</li>
+                        <li>One 30-min 1:1 call</li>
+                        <li>How to move from your current role into PM</li>
                         <li>High-level guidance on resources & learning path</li>
                         <li>Q&A on your specific challenges</li>
                     </ul>
-                    <div class="price">$7</div>
-                    <a href="https://selar.co/yourstarterlink" class="btn" target="_blank">Get Started</a>
+                    <div class="price">₦0 - Free</div>
+                    <a href="https://calendly.com/ukonsisong/30min" class="btn" target="_blank">Book a Free Session</a>
                 </div>
                 <div class="card">
                     <h3>Growth Mentorship Package</h3>
@@ -410,24 +447,24 @@
                         <li>Three 60-min 1:1 calls + support in-between</li>
                         <li>Personalized career roadmap</li>
                         <li>Feedback on one PRD and portfolio</li>
-                        <li>Job readiness tips (resume & LinkedIn pointers)</li>
+                        <li>Job readiness prep (resume & LinkedIn pointers)</li>
                         <li>Mock interview practice (basic)</li>
                     </ul>
-                    <div class="price">$15</div>
-                    <a href="https://selar.co/yourgrowthlink" class="btn" target="_blank">Get Started</a>
+                    <div class="price">₦30,000</div>
+                    <a href="https://forms.gle/km76FHAjbZhTKes19" class="btn" target="_blank">Get Started</a>
                 </div>
                 <div class="card">
-                    <h3>Pro Coaching Package</h3>
+                    <h3>Pro Mentorship Package</h3>
                     <ul>
                         <li>Ongoing mentorship for 4 weeks</li>
-                        <li>Biweekly 1:1 coaching calls</li>
+                        <li>Weekly 1:1 coaching calls</li>
                         <li>Detailed review of PRDs, user stories, or portfolios</li>
                         <li>Mock interview practice + feedback</li>
                         <li>Accountability & progress tracking</li>
                         <li>Access to resource/templates pack</li>
                     </ul>
-                    <div class="price">$30 / month</div>
-                    <a href="https://selar.co/yourprolink" class="btn" target="_blank">Get Started</a>
+                    <div class="price">₦50,000/month</div>
+                    <a href="https://forms.gle/km76FHAjbZhTKes19" class="btn" target="_blank">Get Started</a>
                 </div>
                 <div class="card">
                     <h3>12-Week Full Coaching Program</h3>
@@ -436,12 +473,12 @@
                         <li>End-to-end guidance through PM fundamentals → advanced concepts</li>
                         <li>Hands-on projects (writing PRDs, user stories, roadmaps, backlog prioritization)</li>
                         <li>Mock interviews + feedback</li>
-                        <li>Full portfolio review & support in building one</li>
+                        <li>Full portfolio review & support in building one (A live website)</li>
                         <li>Ongoing accountability and personalized growth plan</li>
                         <li>Access to resource/templates pack + exclusive learning materials</li>
                     </ul>
-                    <div class="price">$100</div>
-                    <a href="https://selar.co/your12weeklink" class="btn" target="_blank">Get Started</a>
+                    <div class="price">₦150,000</div>
+                    <a href="https://forms.gle/km76FHAjbZhTKes19" class="btn" target="_blank">Get Started</a>
                 </div>
             </div>
         </div>
@@ -451,20 +488,23 @@
         <div class="container">
             <div class="section-title">
                 <h2>Testimonials</h2>
-                <p>Hear from our satisfied clients and mentees about their experience with ProdFuse.</p>
+                <p>Hear from our satisfied clients and mentees about their experience with Prodort Spark.</p>
             </div>
             <div class="cards">
                 <div class="card">
-                    <p>"ProdFuse helped me transition into Product Management with a clear roadmap and hands-on guidance. Highly recommend!"</p>
-                    <div class="author">Jane Doe, Aspiring PM</div>
+                    <img src="images/PROFILE 2.jpg" alt="John Smith" class="testimonial-image">
+<p>"The strategy session was transformative for our startup. Their expertise saved us months of trial and error."</p>
+<div class="author"><i>Jane Doe</i>, Aspiring PM</div>
                 </div>
                 <div class="card">
-                    <p>"The strategy session was transformative for our startup. Their expertise saved us months of trial and error."</p>
-                    <div class="author">John Smith, Startup Founder</div>
-                </div>
+    <img src="images/jane-doe.jpg" alt="Jane Doe" class="testimonial-image">
+    <p>"Prodort Spark helped me transition into Product Management with a clear roadmap and hands-on guidance. Highly recommend!"</p>
+    <div class="author"><i>Jane Doe</i>, Aspiring PM</div>
+</div>
                 <div class="card">
-                    <p>"The mentorship package gave me the confidence to land my first PM role. Thank you, ProdFuse!"</p>
-                    <div class="author">Emily Johnson, Product Manager</div>
+                    <img src="images/emily-johnson.jpg" alt="Emily Johnson" class="testimonial-image">
+<p>"The mentorship package gave me the confidence to land my first PM role. Thank you, Prodort Spark!"</p>
+<div class="author"><i>Emily Doe</i>, Aspiring PM</div>
                 </div>
             </div>
         </div>
@@ -477,15 +517,17 @@
                 <p>Have questions or ready to get started? Reach out to us directly.</p>
             </div>
             <div class="contact-info">
-                <p>Chat with us on WhatsApp: <a href="https://wa.me/yourwhatsappnumber" class="btn whatsapp-btn" target="_blank">WhatsApp Chat</a></p>
-                <p>Email us at: <a href="mailto:info@prodfuse.com" class="btn" target="_blank">info@prodfuse.com</a></p>
+                <p>Chat with us on WhatsApp: <a href="https://wa.me/+2348168716602" class="btn whatsapp-btn" target="_blank">WhatsApp Chat</a></p>
+               <p></p>
+               <p>OR</p> 
+                <p>Email us at: <a href="mailto:prodfuse@gmail.com" class="btn" target="_blank">prodfuse@gmail.com</a></p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 ProdFuse. All rights reserved.</p>
+            <p>&copy; 2025 ProdortSpark. All rights reserved.</p>
         </div>
     </footer>
 

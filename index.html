@@ -146,17 +146,17 @@
 
         /* Hero Section */
         .hero {
-    padding: clamp(80px, 10vh, 120px) 0 clamp(15px, 4vh, 40px); /* Increased top padding */
-    background-color: var(--dark-black);
-    text-align: center;
-}
+            padding: clamp(80px, 10vh, 120px) 0 clamp(15px, 4vh, 40px); /* Increased top padding */
+            background-color: var(--dark-black);
+            text-align: center;
+        }
 
-.hero h1 {
-    font-size: clamp(28px, 8vw, 54px);
-    margin-bottom: 10px;
-    line-height: 1.1;
-    padding-top: 20px; /* Added padding above the text to bring it down */
-}
+        .hero h1 {
+            font-size: clamp(28px, 8vw, 54px);
+            margin-bottom: 10px;
+            line-height: 1.1;
+            padding-top: 20px; /* Added padding above the text to bring it down */
+        }
 
         .hero p {
             max-width: 90%;
@@ -591,6 +591,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="services.html" class="btn btn-secondary" target="_blank">Book a Service</a></li>
                 </ul>
             </nav>
         </div>
@@ -619,6 +620,7 @@
                     
                     <a href="#" class="btn btn-primary">Download Resume</a>
                     <a href="mailto:your.ukonsisong@gmail.com" class="btn btn-secondary">Let's Collaborate Together</a>
+                    <a href="services.html" class="btn btn-secondary" target="_blank">Book a Service</a>
                 </div>
             </div>
         </div>
@@ -788,14 +790,17 @@
         // Smooth scrolling for navigation
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                window.scrollTo({
-                    top: target.offsetTop - 60,
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                document.querySelector('nav ul').classList.remove('active');
+                // Check if the href is an in-page anchor (starts with #)
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    window.scrollTo({
+                        top: target.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.querySelector('nav ul').classList.remove('active');
+                }
             });
         });
 
