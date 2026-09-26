@@ -2,830 +2,1438 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NSISONG UKO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Nsisong Uko — Product Manager & Consultant</title>
+    <meta name="description" content="Nsisong Uko, CSM® — Product Manager & Consultant helping teams turn business problems into clear product strategies, practical workflows and user-focused solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-orange: #F4A261;
-            --dark-black: #1C2526;
+            --deep-purple: #3B176D;
+            --purple-light: #6D3DB5;
+            --purple-glow: rgba(59, 23, 109, 0.55);
+            --electric-orange: #FF6B00;
+            --orange-soft: #FF8A3D;
+            --orange-glow: rgba(255, 107, 0, 0.45);
+            --slate-black: #15131A;
+            --slate-gray: #292633;
+            --slate-light: #403A49;
+            --off-white: #F7F4FA;
+            --muted-white: #B8B2C2;
             --pure-white: #FFFFFF;
-            --light-gray: #A9A9A9;
-            --dark-gray: #2A3A3C;
+            --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+            --font-serif: 'DM Serif Display', Georgia, serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Manrope', sans-serif;
-            color: var(--pure-white);
-            background-color: var(--dark-black);
-            line-height: 1.5;
+            font-family: var(--font-sans);
+            color: var(--off-white);
+            background-color: var(--slate-black);
+            line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 1.2px;
-            font-weight: 400;
-            color: var(--primary-orange);
+            font-family: var(--font-sans);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--off-white);
+            line-height: 1.15;
         }
 
-        p, li {
-            text-align:left;
-            text-justify: inter-word;
-            color: var(--pure-white);
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            hyphens: auto;
+        p, li { color: var(--off-white); overflow-wrap: break-word; word-wrap: break-word; }
+        .muted { color: var(--muted-white); }
+
+        .eyebrow {
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--electric-orange);
         }
 
-        .secondary-text {
-            color: var(--light-gray);
-            font-size: 0.9em;
+        .spark {
+            color: var(--electric-orange);
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 0 22px var(--orange-glow);
         }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 10px;
+        .spark::after {
+            content: '';
+            position: absolute;
+            bottom: 0.08em;
+            right: -0.15em;
+            width: 5px;
+            height: 5px;
+            background: var(--electric-orange);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--electric-orange);
         }
+
+        .container { width: min(92%, 1280px); margin-inline: auto; padding: 0 20px; }
+        .section { padding: clamp(70px, 11vh, 120px) 0; position: relative; }
+
+        .section-title {
+            font-size: clamp(28px, 4.5vw, 46px);
+            margin-bottom: 14px;
+            letter-spacing: -0.025em;
+        }
+
+        .section-eyebrow { margin-bottom: 12px; }
+        .section-head { margin-bottom: clamp(36px, 5vw, 64px); max-width: 760px; }
+        .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+        .section-sub {
+            font-size: clamp(15px, 1.6vw, 17px);
+            color: var(--muted-white);
+            max-width: 640px;
+            margin-top: 14px;
+        }
+
+        .section-head.center .section-sub { margin-left: auto; margin-right: auto; }
 
         /* Header */
         header {
-            background-color: var(--dark-black);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            padding: 10px 0;
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background-color: rgba(21, 19, 26, 0.75);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header.scrolled {
+            background-color: rgba(21, 19, 26, 0.95);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
         }
+
+        .header-container { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
 
         .logo {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(20px, 5vw, 26px);
-            color: var(--primary-orange);
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 10px;
-        }
-
-        nav a {
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            font-size: clamp(15px, 1.7vw, 18px);
+            color: var(--off-white);
+            text-transform: uppercase;
             text-decoration: none;
-            color: var(--pure-white);
-            font-weight: 500;
-            font-size: clamp(12px, 3vw, 15px);
-            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--primary-orange);
+        nav ul { display: flex; list-style: none; align-items: center; gap: 6px; }
+
+        nav a.nav-link {
+            text-decoration: none;
+            color: var(--muted-white);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            transition: color 0.25s, background-color 0.25s;
         }
+
+        nav a.nav-link:hover { color: var(--off-white); background-color: rgba(255, 255, 255, 0.05); }
 
         .menu-toggle {
-            display: none;
-            font-size: 20px;
-            color: var(--pure-white);
-            cursor: pointer;
-            padding: 5px;
+            display: none; background: none; border: none;
+            font-size: 22px; color: var(--off-white);
+            cursor: pointer; padding: 6px 10px; border-radius: 8px;
         }
 
         /* Buttons */
         .btn {
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin: 5px 5px 0 0;
-            font-size: 0.9em;
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 24px; border-radius: 999px;
+            font-weight: 700; font-size: 14px; letter-spacing: 0.01em;
+            text-decoration: none; transition: all 0.25s ease;
+            border: 1px solid transparent; cursor: pointer; white-space: nowrap;
         }
 
         .btn-primary {
-            background-color: var(--primary-orange);
-            color: var(--dark-black);
-            border: 2px solid var(--primary-orange);
+            background: var(--electric-orange);
+            color: var(--slate-black);
+            border-color: var(--electric-orange);
+            box-shadow: 0 8px 30px -10px var(--orange-glow);
         }
 
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--primary-orange);
-        }
+        .btn-primary:hover { background: var(--orange-soft); transform: translateY(-2px); box-shadow: 0 14px 40px -10px var(--orange-glow); }
 
         .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-orange);
-            border: 2px solid var(--primary-orange);
+            background: transparent; color: var(--off-white);
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
-        .btn-secondary:hover {
-            background-color: var(--primary-orange);
-            color: var(--dark-black);
-        }
+        .btn-secondary:hover { border-color: var(--electric-orange); color: var(--electric-orange); transform: translateY(-2px); }
 
-        /* Hero Section */
+        .btn-nav { padding: 9px 18px; font-size: 13px; margin-left: 10px; }
+        .btn-arrow { transition: transform 0.25s ease; }
+        .btn:hover .btn-arrow { transform: translateX(3px); }
+
+        /* Hero */
         .hero {
-            padding: clamp(80px, 10vh, 120px) 0 clamp(15px, 4vh, 40px); /* Increased top padding */
-            background-color: var(--dark-black);
-            text-align: center;
+            position: relative;
+            padding: clamp(120px, 20vh, 190px) 0 clamp(70px, 11vh, 120px);
+            background:
+                radial-gradient(circle at 78% 22%, var(--purple-glow), transparent 42%),
+                radial-gradient(circle at 12% 90%, rgba(255, 107, 0, 0.09), transparent 45%),
+                var(--slate-black);
+            overflow: hidden;
         }
+
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+            -webkit-mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+            pointer-events: none;
+        }
+
+        .hero-inner { position: relative; z-index: 1; max-width: 900px; }
+        .hero .eyebrow { display: block; margin-bottom: 22px; }
 
         .hero h1 {
-            font-size: clamp(28px, 8vw, 54px);
+            font-family: var(--font-serif);
+            font-weight: 400;
+            font-size: clamp(34px, 6vw, 68px);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--off-white);
+            margin-bottom: 26px;
+        }
+
+        .hero h1 .hl { color: var(--electric-orange); font-style: italic; }
+
+        .hero-lead {
+            font-size: clamp(16px, 1.9vw, 19px);
+            color: var(--muted-white);
+            max-width: 620px;
+            margin-bottom: 38px;
+        }
+
+        .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 46px; }
+
+        .hero-tags {
+            display: flex; flex-wrap: wrap; gap: 10px 22px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 13px; letter-spacing: 0.05em;
+            color: var(--muted-white);
+        }
+
+        .hero-tags span { display: inline-flex; align-items: center; gap: 8px; }
+        .hero-tags span::before {
+            content: ''; width: 5px; height: 5px;
+            border-radius: 50%; background: var(--electric-orange);
+        }
+
+        .hero-spark {
+            position: absolute; top: 22%; right: 8%;
+            width: 14px; height: 14px;
+            border-radius: 50%; background: var(--electric-orange);
+            box-shadow: 0 0 40px 6px var(--orange-glow);
+            animation: pulse 3.2s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.55; transform: scale(0.75); }
+        }
+
+        /* Stats */
+        .stats-section {
+            padding: clamp(50px, 8vh, 90px) 0;
+            background: linear-gradient(180deg, transparent, rgba(59, 23, 109, 0.14), transparent);
+        }
+
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat {
+            padding: clamp(24px, 3.5vw, 44px) clamp(14px, 2vw, 30px);
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat:last-child { border-right: none; }
+
+        .stat-index {
+            font-size: 11px; letter-spacing: 0.2em;
+            color: var(--muted-white); font-weight: 600;
+            margin-bottom: 18px; display: block;
+        }
+
+        .stat-number {
+            font-family: var(--font-serif); font-weight: 400;
+            font-size: clamp(38px, 5.5vw, 68px);
+            line-height: 1; color: var(--electric-orange);
+            margin-bottom: 12px; letter-spacing: -0.02em;
+        }
+
+        .stat-label { font-size: clamp(12px, 1.3vw, 14px); color: var(--muted-white); line-height: 1.4; }
+
+        /* About */
+        .about-grid {
+            display: grid; grid-template-columns: 0.9fr 1.1fr;
+            gap: clamp(36px, 6vw, 80px); align-items: center;
+        }
+
+        .about-portrait {
+            position: relative; aspect-ratio: 4 / 5;
+            border-radius: 24px; overflow: hidden;
+            background: var(--slate-gray);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .about-portrait img {
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: center top; display: block;
+        }
+
+        .about-portrait::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent 55%, rgba(21, 19, 26, 0.65));
+            pointer-events: none;
+        }
+
+        .about-portrait-badge {
+            position: absolute; bottom: 18px; left: 18px; z-index: 2;
+            background: rgba(21, 19, 26, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 999px; padding: 8px 16px;
+            font-size: 12px; letter-spacing: 0.06em; color: var(--off-white);
+        }
+
+        .about-copy h2 {
+            font-family: var(--font-serif); font-weight: 400;
+            font-size: clamp(26px, 3.4vw, 40px);
+            line-height: 1.15; margin-bottom: 24px;
+        }
+
+        .about-copy p { color: var(--muted-white); font-size: clamp(15px, 1.6vw, 17px); margin-bottom: 18px; }
+        .about-copy p strong { color: var(--off-white); font-weight: 600; }
+
+        .about-facts {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 18px; margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .about-fact-number {
+            font-family: var(--font-serif);
+            font-size: clamp(22px, 2.4vw, 28px);
+            color: var(--electric-orange);
+            line-height: 1.1; margin-bottom: 6px;
+        }
+
+        .about-fact-label { font-size: 13px; color: var(--muted-white); }
+
+        .about-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+        /* What I Solve */
+        .solve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+        .solve-card {
+            background: rgba(41, 38, 51, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            padding: clamp(22px, 2.6vw, 34px);
+            transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+            position: relative; overflow: hidden;
+        }
+
+        .solve-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            height: 2px; width: 0;
+            background: var(--electric-orange);
+            transition: width 0.4s ease;
+        }
+
+        .solve-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 107, 0, 0.35);
+            background: rgba(59, 23, 109, 0.25);
+        }
+
+        .solve-card:hover::before { width: 100%; }
+
+        .solve-index {
+            font-size: 12px; letter-spacing: 0.2em;
+            color: var(--electric-orange);
+            font-weight: 700; margin-bottom: 16px;
+        }
+
+        .solve-card h3 { font-size: clamp(18px, 2vw, 22px); margin-bottom: 12px; }
+        .solve-card p { color: var(--muted-white); font-size: 15px; line-height: 1.6; }
+
+        /* Work */
+        .work-section { background: linear-gradient(180deg, var(--slate-black), rgba(59, 23, 109, 0.15)); }
+
+        .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+        .work-card {
+            position: relative;
+            border-radius: 20px; overflow: hidden;
+            background: var(--slate-gray);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.35s ease, border-color 0.35s ease;
+            display: flex; flex-direction: column;
+            min-height: 340px;
+        }
+
+        .work-card:hover { transform: translateY(-8px); border-color: rgba(255, 107, 0, 0.4); }
+        .work-card.featured { grid-column: span 2; min-height: 460px; }
+
+        .work-media { position: absolute; inset: 0; z-index: 0; }
+        .work-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .work-card:hover .work-media img { transform: scale(1.06); }
+
+        .work-media::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(21, 19, 26, 0.35) 0%, rgba(21, 19, 26, 0.85) 60%, rgba(21, 19, 26, 0.98) 100%);
+        }
+
+        .work-content { position: relative; z-index: 1; margin-top: auto; padding: clamp(24px, 3vw, 40px); }
+
+        .work-tag {
+            display: inline-block;
+            font-size: 11px; letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--electric-orange);
+            font-weight: 700; margin-bottom: 12px;
+        }
+
+        .work-card h3 {
+            font-family: var(--font-serif); font-weight: 400;
+            font-size: clamp(24px, 3vw, 38px);
             margin-bottom: 10px;
-            line-height: 1.1;
-            padding-top: 20px; /* Added padding above the text to bring it down */
         }
 
-        .hero p {
-            max-width: 90%;
-            margin: 0 auto 20px;
-            font-size: clamp(14px, 3vw, 17px);
+        .work-card.featured h3 { font-size: clamp(28px, 3.6vw, 46px); }
+
+        .work-desc {
+            color: var(--muted-white);
+            font-size: clamp(14px, 1.5vw, 16px);
+            max-width: 620px; margin-bottom: 22px;
         }
 
-        /* Sections */
-        .section {
-            padding: clamp(30px, 7vh, 60px) 0;
+        .work-meta {
+            display: flex; flex-wrap: wrap; gap: 10px 26px;
+            margin-bottom: 22px; font-size: 13px;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: clamp(24px, 5vw, 38px);
+        .work-meta span { color: var(--muted-white); }
+        .work-meta span b { color: var(--off-white); font-weight: 600; margin-left: 4px; }
+
+        .work-outcomes {
+            display: flex; flex-wrap: wrap; gap: 8px 12px;
+            margin-bottom: 22px;
         }
 
-        /* About Section */
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+        .work-outcomes span {
+            font-size: 12px;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: rgba(255, 107, 0, 0.12);
+            border: 1px solid rgba(255, 107, 0, 0.28);
+            color: var(--orange-soft);
+            font-weight: 600;
+            letter-spacing: 0.02em;
         }
 
-        .about-image {
-            width: 250px;
-            height: 250px;
+        .work-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--off-white); text-decoration: none;
+            font-weight: 600; font-size: 14px;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+            transition: color 0.25s, border-color 0.25s;
+        }
+
+        .work-link:hover { color: var(--electric-orange); border-color: var(--electric-orange); }
+
+        /* Principles */
+        .principles-section {
+            background: radial-gradient(circle at 15% 20%, rgba(109, 61, 181, 0.18), transparent 45%), var(--slate-black);
+        }
+
+        .principles-list {
+            display: grid; grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .principle {
+            padding: clamp(22px, 2.6vw, 34px) clamp(14px, 1.6vw, 24px);
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .principle:last-child { border-right: none; }
+
+        .principle-number {
+            font-size: 12px; letter-spacing: 0.2em;
+            color: var(--electric-orange);
+            font-weight: 700; margin-bottom: 20px;
+        }
+
+        .principle h3 { font-size: clamp(17px, 1.7vw, 20px); margin-bottom: 10px; }
+        .principle p { font-size: 14px; color: var(--muted-white); line-height: 1.55; }
+
+        /* Coaching */
+        .coaching-section {
+            background: linear-gradient(135deg, var(--deep-purple) 0%, #2A114E 60%, var(--slate-black) 100%);
+            position: relative; overflow: hidden;
+        }
+
+        .coaching-section::before {
+            content: ''; position: absolute;
+            top: -80px; right: -80px;
+            width: 340px; height: 340px;
             border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--primary-orange);
-            margin: 0 auto;
+            background: radial-gradient(circle, var(--orange-glow), transparent 65%);
+            opacity: 0.5; pointer-events: none;
         }
 
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
+        .coaching-inner {
+            position: relative; z-index: 1;
+            display: grid; grid-template-columns: 1.2fr 1fr;
+            gap: clamp(36px, 5vw, 72px); align-items: center;
         }
 
-        .about-text {
-            max-width: 90%;
-            text-align: center;
-            margin: 0 auto;
+        .coaching-inner h2 {
+            font-family: var(--font-serif); font-weight: 400;
+            font-size: clamp(28px, 3.8vw, 46px);
+            line-height: 1.12; margin-bottom: 22px;
         }
 
-        .about-text p {
-            margin-bottom: 10px;
+        .coaching-inner p {
+            color: rgba(247, 244, 250, 0.82);
+            font-size: clamp(15px, 1.6vw, 17px);
+            margin-bottom: 26px; max-width: 560px;
         }
 
-        /* Impact Numbers */
-        .impact-numbers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        .coaching-list {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 14px 24px; margin-bottom: 32px; list-style: none;
         }
 
-        .impact-card {
-            text-align: center;
-            padding: 12px;
-            border-radius: 6px;
-            background: var(--dark-gray);
+        .coaching-list li {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; color: var(--off-white);
         }
 
-        .impact-number {
-            font-size: clamp(24px, 5vw, 42px);
-            font-weight: bold;
-            color: var(--primary-orange);
-            margin-bottom: 5px;
+        .coaching-list li::before {
+            content: ''; width: 6px; height: 6px;
+            border-radius: 50%; background: var(--electric-orange);
+            flex-shrink: 0; box-shadow: 0 0 10px var(--orange-glow);
         }
 
-        .impact-label {
-            font-size: clamp(12px, 3vw, 16px);
-            color: var(--light-gray);
+        .coaching-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .coaching-stat {
+            background: rgba(21, 19, 26, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px; padding: 24px 20px;
+            backdrop-filter: blur(8px);
         }
 
-        /* Capabilities */
-        .capabilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+        .coaching-stat-number {
+            font-family: var(--font-serif);
+            font-size: clamp(28px, 3.2vw, 40px);
+            color: var(--electric-orange);
+            line-height: 1; margin-bottom: 8px;
         }
 
-        .capability-card {
-            background: var(--dark-gray);
-            padding: 12px;
-            border-radius: 6px;
-            border-left: 3px solid var(--primary-orange);
-        }
-
-        .capability-card h3 {
-            font-size: clamp(16px, 3.5vw, 20px);
-            margin-bottom: 5px;
-        }
-
-        .capability-card p {
-            font-size: 0.9em;
-        }
+        .coaching-stat-label { font-size: 13px; color: var(--muted-white); line-height: 1.4; }
 
         /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        .testimonials-section {
+            background: var(--deep-purple);
+            position: relative; overflow: hidden;
         }
 
-        .testimonial-card {
-            background: var(--dark-gray);
-            padding: 15px;
-            border-radius: 6px;
-            border-top: 3px solid var(--primary-orange);
+        .testimonials-section::before {
+            content: ''; position: absolute;
+            bottom: -120px; left: -120px;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 107, 0, 0.22), transparent 65%);
+            pointer-events: none;
+        }
+
+        .testimonials-grid {
+            position: relative; z-index: 1;
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .testimonial {
+            background: rgba(21, 19, 26, 0.28);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: clamp(24px, 2.6vw, 34px);
+            display: flex; flex-direction: column;
+            backdrop-filter: blur(6px);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .testimonial:hover { transform: translateY(-6px); background: rgba(21, 19, 26, 0.42); }
+
+        .quote-mark {
+            font-family: var(--font-serif);
+            font-size: 56px; line-height: 0.6;
+            color: var(--electric-orange);
+            margin-bottom: 18px;
         }
 
         .testimonial-text {
-            font-style: italic;
-            margin-bottom: 10px;
-            font-size: 0.9em;
+            font-size: clamp(15px, 1.6vw, 17px);
+            color: var(--off-white);
+            line-height: 1.6; margin-bottom: 26px; flex-grow: 1;
         }
 
-        .testimonial-author {
-            font-weight: bold;
-            font-size: 0.9em;
+        .testimonial-author { font-weight: 700; font-size: 15px; color: var(--off-white); }
+        .testimonial-role { font-size: 13px; color: var(--muted-white); margin-top: 2px; }
+
+        /* Writing */
+        .writing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+
+        .writing-card {
+            background: rgba(41, 38, 51, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 18px;
+            padding: clamp(22px, 2.4vw, 30px);
+            text-decoration: none; color: inherit;
+            transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+            display: flex; flex-direction: column; min-height: 180px;
         }
 
-        .testimonial-role {
-            color: var(--light-gray);
-            font-size: 0.8em;
+        .writing-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 0, 0.35);
+            background: rgba(59, 23, 109, 0.22);
         }
 
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
+        .writing-card h3 {
+            font-family: var(--font-serif); font-weight: 400;
+            font-size: clamp(19px, 2vw, 24px);
+            line-height: 1.25; margin-bottom: 16px;
         }
 
-        .project-card {
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid var(--primary-orange);
-            transition: transform 0.3s;
+        .writing-card .read {
+            margin-top: auto; font-size: 13px;
+            font-weight: 600; color: var(--electric-orange);
+            display: inline-flex; align-items: center; gap: 6px;
         }
 
-        .project-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .project-image {
-            height: 140px;
-            overflow: hidden;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .project-card:hover .project-image img {
-            transform: scale(1.1);
-        }
-
-        .project-info {
-            padding: 12px;
-            background: var(--dark-gray);
-        }
-
-        .project-info h3 {
-            font-size: clamp(16px, 3.5vw, 20px);
-            margin-bottom: 5px;
-        }
-
-        .project-info p {
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-
-        .project-info a {
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: var(--primary-orange);
-            color: var(--dark-black);
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.8em;
-            transition: background-color 0.3s;
-        }
-
-        .project-info a:hover {
-            background-color: var(--pure-white);
-        }
+        .writing-more { margin-top: 34px; text-align: center; }
 
         /* Contact */
-        .contact-form {
-            max-width: 90%;
-            margin: 0 auto;
+        .contact-section {
+            background: radial-gradient(circle at 85% 15%, var(--purple-glow), transparent 42%), var(--slate-black);
+            position: relative; overflow: hidden;
         }
 
-        .form-group {
-            margin-bottom: 10px;
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: clamp(36px, 5vw, 72px); align-items: start;
         }
+
+        .contact-copy h2 {
+            font-family: var(--font-serif); font-weight: 400;
+            font-size: clamp(30px, 4vw, 52px);
+            line-height: 1.1; margin-bottom: 20px;
+        }
+
+        .contact-copy p {
+            color: var(--muted-white);
+            font-size: clamp(15px, 1.6vw, 17px);
+            max-width: 480px; margin-bottom: 30px;
+        }
+
+        .contact-direct { display: flex; flex-direction: column; gap: 14px; margin-bottom: 34px; }
+
+        .contact-direct a {
+            display: inline-flex; align-items: center; gap: 10px;
+            color: var(--off-white); text-decoration: none;
+            font-weight: 600; font-size: 15px;
+            transition: color 0.25s; width: fit-content;
+        }
+
+        .contact-direct a:hover { color: var(--electric-orange); }
+
+        .contact-direct a .ico {
+            width: 34px; height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 14px;
+            transition: background-color 0.25s, border-color 0.25s;
+        }
+
+        .contact-direct a:hover .ico { background: rgba(255, 107, 0, 0.14); border-color: rgba(255, 107, 0, 0.5); }
+
+        .contact-form {
+            background: rgba(41, 38, 51, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
+            padding: clamp(24px, 3vw, 38px);
+        }
+
+        .form-group { margin-bottom: 18px; }
 
         .form-group label {
-            display: block;
-            color: var(--pure-white);
-            margin-bottom: 5px;
-            font-size: 0.9em;
+            display: block; color: var(--muted-white);
+            margin-bottom: 8px; font-size: 13px;
+            font-weight: 600; letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
         .form-group input,
         .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            background: var(--dark-gray);
-            border: 1px solid var(--primary-orange);
-            color: var(--pure-white);
-            border-radius: 4px;
-            font-size: 0.9em;
+            width: 100%; padding: 14px 16px;
+            background: rgba(21, 19, 26, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--off-white);
+            border-radius: 12px; font-size: 15px;
+            font-family: var(--font-sans);
+            transition: border-color 0.25s, background-color 0.25s;
         }
 
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: rgba(184, 178, 194, 0.5); }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none; border-color: var(--electric-orange);
+            background: rgba(21, 19, 26, 0.85);
         }
+
+        .form-group textarea { height: 130px; resize: vertical; min-height: 100px; }
 
         .submit-btn {
-            background: var(--primary-orange);
-            color: var(--dark-black);
-            padding: 8px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9em;
-            transition: background-color 0.3s;
+            background: var(--electric-orange);
+            color: var(--slate-black);
+            padding: 13px 26px; border: none;
+            border-radius: 999px; cursor: pointer;
+            font-weight: 700; font-size: 14px;
+            font-family: var(--font-sans);
+            transition: background-color 0.25s, transform 0.25s;
+            width: 100%;
         }
 
-        .submit-btn:hover {
-            background: var(--pure-white);
-        }
+        .submit-btn:hover { background: var(--orange-soft); transform: translateY(-2px); }
 
         /* Footer */
         footer {
-            background-color: var(--dark-black);
-            color: var(--pure-white);
-            padding: 20px 0;
-            text-align: center;
+            background-color: var(--slate-black);
+            color: var(--off-white);
+            padding: 44px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: flex; flex-direction: column;
+            gap: 22px; align-items: center; text-align: center;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+        .footer-logo {
+            font-weight: 800; letter-spacing: 0.06em;
+            font-size: 16px; text-transform: uppercase;
         }
+
+        .footer-role { font-size: 13px; color: var(--muted-white); margin-top: -14px; }
+
+        .social-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
 
         .social-links a {
-            color: var(--pure-white);
-            text-decoration: none;
-            font-size: 0.9em;
-            transition: color 0.3s;
+            color: var(--muted-white); text-decoration: none;
+            font-size: 14px; transition: color 0.25s;
         }
 
-        .social-links a:hover {
-            color: var(--primary-orange);
+        .social-links a:hover { color: var(--electric-orange); }
+
+        .footer-copy {
+            font-size: 12px; color: var(--muted-white);
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            width: 100%;
         }
 
-        /* Mobile Navigation */
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat:nth-child(2) { border-right: none; }
+            .stat:nth-child(1),
+            .stat:nth-child(2) { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+
+            .solve-grid { grid-template-columns: repeat(2, 1fr); }
+            .principles-list { grid-template-columns: repeat(2, 1fr); }
+            .principle { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+            .principle:nth-child(2n) { border-right: none; }
+            .principle:last-child { border-bottom: none; }
+
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 860px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .about-portrait { max-width: 400px; margin-inline: auto; }
+
+            .work-grid { grid-template-columns: 1fr; }
+            .work-card.featured { grid-column: span 1; min-height: 380px; }
+
+            .coaching-inner { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .writing-grid { grid-template-columns: 1fr; }
+        }
+
         @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+
             nav ul {
                 display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 50px;
-                left: 0;
+                position: absolute; top: 100%; left: 0;
                 width: 100%;
-                background: var(--dark-black);
-                padding: 10px;
-                gap: 8px;
+                background: rgba(21, 19, 26, 0.98);
+                backdrop-filter: blur(14px);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 16px; gap: 6px;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
             }
 
-            nav ul.active {
-                display: flex;
-            }
+            nav ul.active { display: flex; }
+            nav a.nav-link { padding: 12px 16px; }
+            .btn-nav { margin: 8px 0 0 0; justify-content: center; }
 
-            .menu-toggle {
-                display: block;
-            }
+            .hero { padding: clamp(100px, 16vh, 140px) 0 60px; }
+            .hero-spark { top: 15%; right: 6%; width: 10px; height: 10px; }
 
-            .hero {
-                padding-top: clamp(40px, 7vh, 70px);
-            }
+            .solve-grid { grid-template-columns: 1fr; }
+            .principles-list { grid-template-columns: 1fr; }
+            .principle { border-right: none; }
 
-            .about-content {
-                gap: 8px;
-            }
+            .coaching-visual { grid-template-columns: 1fr 1fr; }
+            .coaching-list { grid-template-columns: 1fr; }
 
-            .about-image {
-                width: 200px;
-                height: 200px;
-            }
-
-            .impact-numbers,
-            .testimonials {
-                gap: 10px;
-            }
-
-            .capabilities-grid,
-            .projects-grid {
-                gap: 10px;
-            }
+            .hero-cta .btn { width: 100%; justify-content: center; }
         }
 
         @media (max-width: 480px) {
-            .hero {
-                padding-top: clamp(30px, 6vh, 60px);
-            }
+            .container { padding: 0 16px; }
 
-            .about-content {
-                gap: 5px;
-            }
+            .stats-grid { grid-template-columns: 1fr; }
+            .stat { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+            .stat:last-child { border-bottom: none; }
 
-            .about-image {
-                width: 180px;
-                height: 180px;
-            }
+            .about-facts { grid-template-columns: 1fr; }
 
-            .section {
-                padding: clamp(20px, 5vh, 40px) 0;
-            }
+            .work-card { min-height: 300px; }
+            .work-card.featured { min-height: 340px; }
 
-            .section-title {
-                margin-bottom: 15px;
-                font-size: clamp(20px, 6vw, 28px);
-            }
-
-            .impact-numbers {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-
-            .impact-card {
-                padding: 10px;
-            }
-
-            .impact-number {
-                font-size: clamp(20px, 5vw, 32px);
-            }
-
-            .impact-label {
-                font-size: clamp(10px, 3vw, 14px);
-            }
-
-            .btn {
-                padding: 6px 12px;
-                margin: 4px 0 0 0;
-                font-size: 0.85em;
-            }
-
-            .project-image {
-                height: 100px;
-            }
-
-            .project-info {
-                padding: 10px;
-            }
-
-            .capability-card,
-            .testimonial-card {
-                padding: 10px;
-            }
-
-            footer {
-                padding: 15px 0;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .hero {
-                padding-top: clamp(20px, 5vh, 50px);
-            }
-
-            .about-content {
-                gap: 4px;
-            }
-
-            .about-image {
-                width: 150px;
-                height: 150px;
-            }
-
-            .impact-numbers {
-                gap: 6px;
-            }
-
-            .section-title {
-                font-size: clamp(18px, 6vw, 24px);
-            }
-
-            .hero h1 {
-                font-size: clamp(22px, 8vw, 32px);
-            }
-
-            .hero p {
-                font-size: clamp(12px, 3vw, 15px);
-            }
+            .coaching-visual { grid-template-columns: 1fr; }
+            .writing-card { min-height: auto; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+
+    <!-- ========== Header ========== -->
+    <header id="site-header">
         <div class="container header-container">
-            <div class="logo">NSISONG UKO</div>
+            <a href="#" class="logo">NSISONG UK<span class="spark">O</span></a>
             <nav>
-                <div class="menu-toggle">☰</div>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#impact">Impact</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="services.html" class="btn btn-secondary" target="_blank">Book a Service</a></li>
+                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+                <ul id="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#solve" class="nav-link">What I Solve</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#principles" class="nav-link">Principles</a></li>
+                    <li><a href="#coaching" class="nav-link">Coaching</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="services.html" class="btn btn-primary btn-nav" target="_blank">Book a Service</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ========== Hero ========== -->
     <section class="hero">
+        <span class="hero-spark" aria-hidden="true"></span>
         <div class="container">
-            <h1>HELLO, I'M NSISONG UKO</h1>
-            <p>A results-driven Product Manager with a passion for creating user-centric digital products that bridge business objectives with technical solutions. I specialize in transforming complex problems into intuitive, impactful experiences.</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/PROFILE 1.jpg" alt="Nsisong - Product Manager" loading="lazy">
+            <div class="hero-inner">
+                <span class="eyebrow">Product/Project Manager · Consultant · Scrum Master</span>
+                <h1>I turn complex problems into products, systems &amp; <span class="hl">better ways of working.</span></h1>
+                <p class="hero-lead">
+                    I'm Nsisong Uko, a Product/Project Manager and Consultant helping teams turn business
+                    problems into clear product strategies, practical workflows and user-focused solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-primary">View My Work <span class="btn-arrow">→</span></a>
+                    <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
                 </div>
-                <div class="about-text">
-                    <h2 class="section-title">A BIT ABOUT MY STORY</h2>
-                    <p>With 3 years of experience in product management, I've led cross-functional teams to deliver successful digital products across various industries. My approach combines strategic thinking with hands-on execution to drive product excellence.</p>
-                    <p>I believe in data-informed decision making, but never lose sight of the human element in product design. My expertise spans the entire product lifecycle from ideation to launch and iteration.</p>
-                    <p>When I'm not optimizing user flows or analyzing metrics, you can find me learning something new, which helps me maintain a fresh perspective on problem-solving.</p>
-                    
-                    <a href="#" class="btn btn-primary">Download Resume</a>
-                    <a href="mailto:your.ukonsisong@gmail.com" class="btn btn-secondary">Let's Collaborate Together</a>
-                    <a href="services.html" class="btn btn-secondary" target="_blank">Book a Service</a>
+                <div class="hero-tags">
+                    <span>Product Strategy</span>
+                    <span>Discovery</span>
+                    <span>Delivery</span>
+                    <span>Product/Project Operations</span>
+                    <span>Coaching</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Capabilities -->
-    <section id="capabilities" class="section">
+    <!-- ========== Impact Stats ========== -->
+    <section class="stats-section" id="impact">
         <div class="container">
-            <h2 class="section-title">MY CAPABILITIES</h2>
-            <div class="capabilities-grid">
-                <div class="capability-card">
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-index">01</span>
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Years in Product</div>
+                </div>
+                <div class="stat">
+                    <span class="stat-index">02</span>
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Products &amp; Platforms</div>
+                </div>
+                <div class="stat">
+                    <span class="stat-index">03</span>
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">Learners Reached</div>
+                </div>
+                <div class="stat">
+                    <span class="stat-index">04</span>
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Conversion Improvement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== About ========== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-portrait">
+                    <img src="images/PROFILE MAIN.jpg" alt="Nsisong Uko — Product Manager &amp; Consultant" loading="lazy">
+                    <span class="about-portrait-badge">CSM® · Product/Project Consultant</span>
+                </div>
+                <div class="about-copy">
+                    <span class="eyebrow section-eyebrow">About</span>
+                    <h2>A product thinker who builds, teaches &amp; improves systems.</h2>
+                    <p>
+                        My journey into Product Management wasn't linear. I started in <strong>education</strong>, moved through
+                        <strong>digital marketing</strong> and <strong>community work</strong>, transitioned into <strong>Product Management</strong>,
+                        and eventually began helping other professionals make the same transition.
+                    </p>
+                    <p>
+                        Today, I work across product management, consulting and product education bringing together
+                        strategy, execution, systems thinking and human-centered problem solving for startups across
+                        real estate, edtech, logistics, sports entertainment and business operations.
+                    </p>
+                    <div class="about-facts">
+                         <div>
+                            <div class="about-fact-number">Best Grad</div>
+                            <div class="about-fact-label">HerTechTrail PM Cohort 6</div>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#" class="btn btn-primary">Download Resume</a>
+                        <a href="mailto:ukonsisong@gmail.com" class="btn btn-secondary">Let's Collaborate Together</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== What I Do ========== -->
+    <section class="section solve-section" id="solve">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow section-eyebrow">What I Help Teams Do</span>
+                <h2 class="section-title">Problems worth solving, solved well.</h2>
+                <p class="section-sub">
+                    From ambiguous ideas to shipped products, I help teams bring clarity, structure and momentum to the
+                    hardest parts of product work.
+                </p>
+            </div>
+            <div class="solve-grid">
+                <article class="solve-card">
+                    <div class="solve-index">01</div>
+                    <h3>Product Discovery</h3>
+                    <p>Turning ambiguous ideas and problems into clearly defined opportunities.</p>
+                </article>
+                <article class="solve-card">
+                    <div class="solve-index">02</div>
                     <h3>Product Strategy</h3>
-                    <p>Developing comprehensive product visions and roadmaps that align with business goals and market opportunities. Creating measurable success metrics and KPIs to track product performance.</p>
-                </div>
-                <div class="capability-card">
-                    <h3>User Research</h3>
-                    <p>Conducting qualitative and quantitative research including interviews, surveys, and usability testing to uncover user needs and pain points. Translating insights into product requirements.</p>
-                </div>
-                <div class="capability-card">
-                    <h3>Agile Development</h3>
-                    <p>Leading cross-functional teams through iterative development cycles. Facilitating sprint planning, standups, and retrospectives to maintain team velocity and product quality.</p>
-                </div>
-                <div class="capability-card">
-                    <h3>Data Analysis</h3>
-                    <p>Leveraging analytics tools to monitor product performance, identify trends, and inform decision-making. Implementing A/B tests to optimize user experience and conversion.</p>
-                </div>
-                <div class="capability-card">
-                    <h3>Stakeholder Management</h3>
-                    <p>Aligning executives, engineers, designers, and customers on product direction. Communicating effectively across all levels of the organization to build consensus.</p>
-                </div>
-                <div class="capability-card">
-                    <h3>UX Design</h3>
-                    <p>Collaborating with designers to create intuitive, accessible user experiences. Developing user flows, wireframes, and prototypes to validate design concepts.</p>
-                </div>
+                    <p>Connecting user needs, business goals and product priorities.</p>
+                </article>
+                <article class="solve-card">
+                    <div class="solve-index">03</div>
+                    <h3>MVP &amp; Prioritization</h3>
+                    <p>Finding the smallest useful solution without losing sight of the bigger vision.</p>
+                </article>
+                <article class="solve-card">
+                    <div class="solve-index">04</div>
+                    <h3>Product Delivery</h3>
+                    <p>Turning requirements into actionable work for design and engineering teams.</p>
+                </article>
+                <article class="solve-card">
+                    <div class="solve-index">05</div>
+                    <h3>Workflow &amp; Operations</h3>
+                    <p>Making messy business processes clearer, measurable and easier to manage.</p>
+                </article>
+                <article class="solve-card">
+                    <div class="solve-index">06</div>
+                    <h3>Product Coaching</h3>
+                    <p>Helping aspiring and transitioning PMs develop practical product skills.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Impact Numbers -->
-    <section id="impact" class="section">
+    <!-- ========== Selected Work ========== -->
+    <section class="section work-section" id="work">
         <div class="container">
-            <h2 class="section-title">IMPACT BY NUMBERS</h2>
-            <div class="impact-numbers">
-                <div class="impact-card">
-                    <div class="impact-number">3+</div>
-                    <div class="impact-label">Years Experience</div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-number">3+</div>
-                    <div class="impact-label">Products Launched</div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-number">200+</div>
-                    <div class="impact-label">Users Impacted</div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-number">40%</div>
-                    <div class="impact-label">Conversion Boost</div>
-                </div>
+            <div class="section-head">
+                <span class="eyebrow section-eyebrow">Selected Work</span>
+                <h2 class="section-title">Ideas I've brought to life.</h2>
+                <p class="section-sub">
+                    A selection of platforms, products and systems I've helped shape from discovery through delivery.
+                </p>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">IDEAS I'VE BROUGHT TO LIFE</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/EKOCRIB.jpg" alt="Ekocrib" loading="lazy">
+            <div class="work-grid">
+
+                <!-- FEATURED: Socioknack -->
+                <article class="work-card featured">
+                    <div class="work-media">
+                        <img src="images/SOCIOKNACK 2.png" alt="Socioknack — Sales Enablement" loading="lazy">
                     </div>
-                    <div class="project-info">
-                        <h3>Ekocrib</h3>
-                        <p>As Product Manager at Ekocrib, I led the launch of a real estate platform that attracted over 200 early users in Lagos within two weeks. I drove data-informed decisions through A/B testing, achieving a 40% boost in homepage conversions.</p>
-                        <a href="https://www.ekocrib.com/" target="_blank">View Live Project</a>
+                    <div class="work-content">
+                        <span class="work-tag">Sales Enablement · Web + Mobile</span>
+                        <h3>Socioknack</h3>
+                        <p class="work-desc">
+                            Turning fragmented field-sales processes into a structured digital workflow - onboarding,
+                            sales tracking, commission logic and rewards management for sales agents.
+                        </p>
+                        <div class="work-meta">
+                            <span><b>Role:</b> Product Manager</span>
+                            <span><b>Company:</b> Seal Richards</span>
+                        </div>
+                        <div class="work-outcomes">
+                            <span>Early MVP </span>
+                            <span>Onboarding + sales tracking</span>
+                            <span>Commission &amp; rewards logic</span>
+                        </div>
+                        <a href="#contact" class="work-link">View Case Study <span class="btn-arrow">→</span></a>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
+                </article>
+
+                <!-- TruthHub -->
+                <article class="work-card">
+                    <div class="work-media">
+                        <img src="images/TRUTHHUB.jpeg" alt="TruthHub — Safety & Assurance Platform" loading="lazy">
+                    </div>
+                    <div class="work-content">
+                        <span class="work-tag">Safety &amp; Assurance · Web + Mobile</span>
+                        <h3>TruthHub</h3>
+                        <p class="work-desc">
+                            Delivered from discovery to MVP features in under 4 months. A safety and assurance platform
+                            built for verified field operations and multi-family security.
+                        </p>
+                        <div class="work-meta">
+                            <span><b>Role:</b> Project Manager</span>
+                            <span><b>Company:</b> Seal Richards</span>
+                        </div>
+                        <div class="work-outcomes">
+                            <span>10+ core features shipped</span>
+                            <span>Discovery → completion in 4 months</span>
+                            <span>Verified agent visits + GPS tracking</span>
+                        </div>
+                        <a href="#contact" class="work-link">View Case Study <span class="btn-arrow">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Eko Crib -->
+                <article class="work-card">
+                    <div class="work-media">
+                        <img src="images/EKOCRIB.jpg" alt="Eko Crib" loading="lazy">
+                    </div>
+                    <div class="work-content">
+                        <span class="work-tag">Real Estate · Web</span>
+                        <h3>Eko Crib</h3>
+                        <p class="work-desc">
+                            Made house hunting easier for Lagos residents. Beta launched with strong early traction.
+                        </p>
+                        <div class="work-meta">
+                            <span><b>Role:</b> Product Manager / Head of Operations</span>
+                        </div>
+                        <div class="work-outcomes">
+                            <span>200+ signups in 2 weeks</span>
+                            <span>+40% homepage conversion</span>
+                            <span>35% faster iteration</span>
+                        </div>
+                        <a href="https://www.ekocrib.com/" target="_blank" class="work-link">View Live Product <span class="btn-arrow">→</span></a>
+                    </div>
+                </article>
+
+                <!-- Sportverse -->
+                <article class="work-card">
+                    <div class="work-media">
+                        <img src="images/SPORTVERSE.jpg" alt="Sportverse" loading="lazy">
+                    </div>
+                    <div class="work-content">
+                        <span class="work-tag">Sports &amp; Entertainment · Mobile</span>
+                        <h3>Sportverse</h3>
+                        <p class="work-desc">
+                            A virtual sports betting app with real odds, fantasy leagues, trivia and prizes.
+                            Delivered MVP in under 90 days.
+                        </p>
+                        <div class="work-meta">
+                            <span><b>Role:</b> Product Manager</span>
+                            <span><b>Company:</b> Zuvo Limited</span>
+                        </div>
+                        <div class="work-outcomes">
+                            <span>MVP in under 90 days</span>
+                            <span>Non-monetary betting focus</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.zuvo.sportverse&pcampaignid=web_share" target="_blank" class="work-link">View Live Product <span class="btn-arrow">→</span></a>
+                    </div>
+                </article>
+
+                <!-- HerTechTrail -->
+                <article class="work-card">
+                    <div class="work-media">
                         <img src="images/HERTECHTRAIL.jpg" alt="HerTechTrail" loading="lazy">
                     </div>
-                    <div class="project-info">
+                    <div class="work-content">
+                        <span class="work-tag">EdTech · Coaching</span>
                         <h3>HerTechTrail</h3>
-                        <p>At HerTechTrail, I co-led the redesign of the academy website, increasing learner engagement by 60%, and managed LMS development sprints. I mentored over 200 product interns.</p>
-                        <a href="https://events.hertechtrail.org/" target="_blank">View Live Project</a>
+                        <p class="work-desc">
+                            Building Edtech solutions including academy website, LMS and event platform.
+                        </p>
+                        <div class="work-meta">
+                            <span><b>Role:</b> Product Manager / Coach</span>
+                        </div>
+                        <div class="work-outcomes">
+                            <span>+60% learner engagement</span>
+                            <span>+40% Techherfest24 registrations</span>
+                            <span>200+ interns mentored</span>
+                        </div>
+                        <a href="https://events.hertechtrail.org/" target="_blank" class="work-link">View Live Product <span class="btn-arrow">→</span></a>
                     </div>
+                </article>
+
+                <!-- Teeket -->
+                <article class="work-card">
+                    <div class="work-media">
+                        <img src="images/TEEKET.jpg" alt="Teket — Event Management App" loading="lazy">
+                    </div>
+                    <div class="work-content">
+                        <span class="work-tag">Event Management · Mobile</span>
+                        <h3>Teket</h3>
+                        <p class="work-desc">
+                            Developed and launched the MVP of an event management app for early user growth.
+                        </p>
+                        <div class="work-meta">
+                            <span><b>Role:</b> Associate Product Manager</span>
+                        </div>
+                        <div class="work-outcomes">
+                            <span>+30% early signups</span>
+                        </div>
+                        <a href="https://docs.google.com/document/d/1bYCy5Pdb151UgdD-tAw65aEtFC5FY73BhJ-YmA7OAYo/edit?usp=sharing" target="_blank" class="work-link">View Case Study <span class="btn-arrow">→</span></a>
+                    </div>
+                </article>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Principles ========== -->
+    <section class="section principles-section" id="principles">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow section-eyebrow">My Product Principles</span>
+                <h2 class="section-title">How I think.</h2>
+            </div>
+            <div class="principles-list">
+                <div class="principle">
+                    <div class="principle-number">01</div>
+                    <h3>Start with the problem.</h3>
+                    <p>Not the feature.</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/SPORTVERSE.jpg" alt="SportVerse" loading="lazy">
+                <div class="principle">
+                    <div class="principle-number">02</div>
+                    <h3>Make complexity clear.</h3>
+                    <p>Good product work creates clarity.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-number">03</div>
+                    <h3>Build the smallest useful thing.</h3>
+                    <p>MVP doesn't mean minimum effort.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-number">04</div>
+                    <h3>Talk to users.</h3>
+                    <p>Assumptions are expensive.</p>
+                </div>
+                <div class="principle">
+                    <div class="principle-number">05</div>
+                    <h3>Ship. Learn. Improve.</h3>
+                    <p>A product isn't finished when it launches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Coaching ========== -->
+    <section class="section coaching-section" id="coaching">
+        <div class="container">
+            <div class="coaching-inner">
+                <div>
+                    <span class="eyebrow section-eyebrow">Coaching &amp; Mentorship</span>
+                    <h2>Building products. Growing people.</h2>
+                    <p>
+                        I also help aspiring and transitioning professionals understand Product/Project Management
+                        through practical projects, product thinking, Agile delivery and mentorship.
+                    </p>
+                    <ul class="coaching-list">
+                        <li>Product/Project Management Coaching</li>
+                        <li>Portfolio Mentorship</li>
+                        <li>Agile &amp; Scrum Fundamentals</li>
+                        <li>Practical Product Projects</li>
+                    </ul>
+                    <a href="services.html" target="_blank" class="btn btn-primary">Reach out for Coaching/Mentorship <span class="btn-arrow">→</span></a>
+                </div>
+                <div class="coaching-visual">
+                    <div class="coaching-stat">
+                        <div class="coaching-stat-number">200+</div>
+                        <div class="coaching-stat-label">Product/Project Interns Mentored</div>
                     </div>
-                    <div class="project-info">
-                        <h3>SPORTVERSE</h3>
-                        <p>Led the development of Sportverse, a virtual sports betting app offering real odds, fantasy leagues, trivia, and prize systems — delivered the MVP in under 90 days.</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.zuvo.sportverse&pcampaignid=web_share" target="_blank">View Live Project</a>
+                    <div class="coaching-stat">
+                        <div class="coaching-stat-number">100+</div>
+                        <div class="coaching-stat-label">Transitioned to Full-Time PM Roles</div>
+                    </div>
+                    <div class="coaching-stat">
+                        <div class="coaching-stat-number">10+</div>
+                        <div class="coaching-stat-label">Cohorts Supported</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
+    <!-- ========== Testimonials ========== -->
+    <section class="section testimonials-section" id="testimonials">
         <div class="container">
-            <h2 class="section-title">WHAT PARTNERS ARE SAYING</h2>
-            <div class="testimonials">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Nsisong's product leadership was instrumental in our platform's success. Her ability to translate complex requirements into actionable features was remarkable."</p>
+            <div class="section-head">
+                <span class="eyebrow section-eyebrow">What Partners Are Saying</span>
+                <h2 class="section-title">Trusted by founders, teams &amp; builders.</h2>
+            </div>
+            <div class="testimonials-grid">
+                <article class="testimonial">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">
+                        Nsisong's product leadership was instrumental in our platform's success. Her ability
+                        to translate complex requirements into actionable features was remarkable.
+                    </p>
                     <div class="testimonial-author">Seyi Alawale</div>
                     <div class="testimonial-role">CEO, Seal Richard Company</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Working with Nsisong was a game-changer for our product. Her user-centric approach and data-driven decisions significantly improved our metrics."</p>
+                </article>
+                <article class="testimonial">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">
+                        Working with Nsisong was a game-changer for our product. Her user-centric approach
+                        and data-driven decisions significantly improved our metrics.
+                    </p>
                     <div class="testimonial-author">Ajayi</div>
-                    <div class="testimonial-role">Founder, Mobile Developer</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Nsisong brought clarity and direction to our product roadmap. Her strategic thinking and execution skills are truly exceptional."</p>
+                    <div class="testimonial-role">Founder &amp; Mobile Developer</div>
+                </article>
+                <article class="testimonial">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">
+                        Nsisong brought clarity and direction to our product roadmap. Her strategic
+                        thinking and execution skills are truly exceptional.
+                    </p>
                     <div class="testimonial-author">Boma</div>
-                    <div class="testimonial-role">Founder, Product Designer</div>
-                </div>
+                    <div class="testimonial-role">Founder &amp; Product Designer</div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
+    <!-- ========== Writing ========== -->
+    <section class="section writing-section" id="writing">
         <div class="container">
-            <h2 class="section-title">Let's Build Something Great Together</h2>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-                <input type="hidden" name="form-name" value="contact">
-                <p class="hidden">
-                </p>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            <div class="section-head">
+                <span class="eyebrow section-eyebrow">Things I've Been Thinking About</span>
+                <h2 class="section-title">Notes on product, systems &amp; growth.</h2>
+            </div>
+            <div class="writing-grid">
+                <a href="https://www.linkedin.com/in/nsisonguko/" target="_blank" class="writing-card">
+                    <h3>AI won't replace product thinking.</h3>
+                    <span class="read">Read more on LinkedIn →</span>
+                </a>
+                <a href="https://www.linkedin.com/in/nsisonguko/" target="_blank" class="writing-card">
+                    <h3>Why every business needs product thinking — not just software companies.</h3>
+                    <span class="read">Read more on LinkedIn →</span>
+                </a>
+                <a href="https://www.linkedin.com/in/nsisonguko/" target="_blank" class="writing-card">
+                    <h3>The PM's job isn't to ship faster.</h3>
+                    <span class="read">Read more on LinkedIn →</span>
+                </a>
+                <a href="https://www.linkedin.com/in/nsisonguko/" target="_blank" class="writing-card">
+                    <h3>What transitioning into Product Management actually taught me.</h3>
+                    <span class="read">Read more on LinkedIn →</span>
+                </a>
+            </div>
+            <div class="writing-more">
+                <a href="https://www.linkedin.com/in/nsisonguko/" target="_blank" class="btn btn-secondary">Read more on LinkedIn <span class="btn-arrow">→</span></a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========== Contact ========== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-copy">
+                    <span class="eyebrow section-eyebrow">Contact</span>
+                    <h2>Have a problem worth solving?</h2>
+                    <p>
+                        Whether you're building a product, improving a workflow or developing your product team, let's talk.
+                    </p>
+                    <div class="contact-direct">
+                        <a href="mailto:ukonsisong@gmail.com">
+                            <span class="ico">✉</span>
+                            ukonsisong@gmail.com
+                        </a>
+                        <a href="tel:+2348168716602">
+                            <span class="ico">☎</span>
+                            +234 816 871 6602
+                        </a>
+                        <a href="https://www.linkedin.com/in/nsisonguko/" target="_blank">
+                            <span class="ico">in</span>
+                            linkedin.com/in/nsisonguko
+                        </a>
+                    </div>
+                </div>
+
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or problem..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
     <footer>
         <div class="container">
             <div class="footer-content">
+                <div class="footer-logo">NSISONG UK<span class="spark">O</span></div>
+                <div class="footer-role">Product/Project Manager &amp; Consultant</div>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/nsisonguko/" target="_blank">LinkedIn</a>
-                    <a href="https://x.com/Nsysong_Uko" target="_blank">Twitter</a>
+                    <a href="https://x.com/Nsysong_Uko" target="_blank">X / Twitter</a>
                     <a href="https://facebook.com/Nsysung.Uko" target="_blank">Facebook</a>
+                    <a href="mailto:ukonsisong@gmail.com">Email</a>
                 </div>
-                <p>© 2025 Nsisong Uko. All rights reserved.</p>
+                <div class="footer-copy">© 2026 Nsisong Uko. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
+        // Smooth scrolling for in-page anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                // Check if the href is an in-page anchor (starts with #)
-                if (this.getAttribute('href').startsWith('#')) {
+                const href = this.getAttribute('href');
+                if (href.length > 1) {
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    window.scrollTo({
-                        top: target.offsetTop - 60,
-                        behavior: 'smooth'
-                    });
-                    // Close mobile menu if open
-                    document.querySelector('nav ul').classList.remove('active');
+                    const target = document.querySelector(href);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                        const navList = document.getElementById('nav-list');
+                        if (navList) navList.classList.remove('active');
+                    }
                 }
             });
         });
 
         // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.getElementById('nav-list');
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+            });
+        }
+
+        // Header scroll state
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
 
-        // Form submission handling
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(new FormData(this)).toString()
-            })
-            .then(() => {
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-            })
-            .catch(error => {
-                console.error('Form submission error:', error);
-                alert('There was an error sending your message. Please try again later.');
+        // Contact form submission
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(this)).toString()
+                })
+                .then(() => {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    this.reset();
+                })
+                .catch(error => {
+                    console.error('Form submission error:', error);
+                    alert('There was an error sending your message. Please try again later.');
+                });
             });
-        });
+        }
     </script>
 </body>
 </html>
