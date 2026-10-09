@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nsisong Uko — Product Manager & Consultant</title>
-    <meta name="description" content="Nsisong Uko, CSM® — Product Manager & Consultant helping teams turn business problems into clear product strategies, practical workflows and user-focused solutions.">
+    <title>Nsisong Uko, Product Manager & Consultant</title>
+    <meta name="description" content="Nsisong Uko, CSM® — Product Manager & Consultant. I turn complex problems into products, systems and better ways of working.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -22,7 +22,6 @@
             --slate-light: #403A49;
             --off-white: #F7F4FA;
             --muted-white: #B8B2C2;
-            --pure-white: #FFFFFF;
             --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
             --font-serif: 'DM Serif Display', Georgia, serif;
         }
@@ -64,7 +63,6 @@
             display: inline-block;
             text-shadow: 0 0 22px var(--orange-glow);
         }
-
         .spark::after {
             content: '';
             position: absolute;
@@ -87,16 +85,15 @@
         }
 
         .section-eyebrow { margin-bottom: 12px; }
-        .section-head { margin-bottom: clamp(36px, 5vw, 64px); max-width: 760px; }
+        .section-head { margin-bottom: clamp(36px, 5vw, 64px); max-width: 800px; }
         .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 
         .section-sub {
             font-size: clamp(15px, 1.6vw, 17px);
             color: var(--muted-white);
-            max-width: 640px;
+            max-width: 680px;
             margin-top: 14px;
         }
-
         .section-head.center .section-sub { margin-left: auto; margin-right: auto; }
 
         /* Header */
@@ -108,7 +105,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             transition: background-color 0.3s ease, border-color 0.3s ease;
         }
-
         header.scrolled {
             background-color: rgba(21, 19, 26, 0.95);
             border-bottom-color: rgba(255, 255, 255, 0.1);
@@ -136,7 +132,6 @@
             border-radius: 999px;
             transition: color 0.25s, background-color 0.25s;
         }
-
         nav a.nav-link:hover { color: var(--off-white); background-color: rgba(255, 255, 255, 0.05); }
 
         .menu-toggle {
@@ -153,21 +148,18 @@
             text-decoration: none; transition: all 0.25s ease;
             border: 1px solid transparent; cursor: pointer; white-space: nowrap;
         }
-
         .btn-primary {
             background: var(--electric-orange);
             color: var(--slate-black);
             border-color: var(--electric-orange);
             box-shadow: 0 8px 30px -10px var(--orange-glow);
         }
-
         .btn-primary:hover { background: var(--orange-soft); transform: translateY(-2px); box-shadow: 0 14px 40px -10px var(--orange-glow); }
 
         .btn-secondary {
             background: transparent; color: var(--off-white);
             border: 1px solid rgba(255, 255, 255, 0.18);
         }
-
         .btn-secondary:hover { border-color: var(--electric-orange); color: var(--electric-orange); transform: translateY(-2px); }
 
         .btn-nav { padding: 9px 18px; font-size: 13px; margin-left: 10px; }
@@ -208,7 +200,6 @@
             color: var(--off-white);
             margin-bottom: 26px;
         }
-
         .hero h1 .hl { color: var(--electric-orange); font-style: italic; }
 
         .hero-lead {
@@ -227,7 +218,6 @@
             font-size: 13px; letter-spacing: 0.05em;
             color: var(--muted-white);
         }
-
         .hero-tags span { display: inline-flex; align-items: center; gap: 8px; }
         .hero-tags span::before {
             content: ''; width: 5px; height: 5px;
@@ -242,7 +232,6 @@
             animation: pulse 3.2s ease-in-out infinite;
             z-index: 1;
         }
-
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.55; transform: scale(0.75); }
@@ -253,18 +242,15 @@
             padding: clamp(50px, 8vh, 90px) 0;
             background: linear-gradient(180deg, transparent, rgba(59, 23, 109, 0.14), transparent);
         }
-
         .stats-grid {
             display: grid; grid-template-columns: repeat(4, 1fr);
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
-
         .stat {
             padding: clamp(24px, 3.5vw, 44px) clamp(14px, 2vw, 30px);
             border-right: 1px solid rgba(255, 255, 255, 0.08);
         }
-
         .stat:last-child { border-right: none; }
 
         .stat-index {
@@ -272,14 +258,12 @@
             color: var(--muted-white); font-weight: 600;
             margin-bottom: 18px; display: block;
         }
-
         .stat-number {
             font-family: var(--font-serif); font-weight: 400;
             font-size: clamp(38px, 5.5vw, 68px);
             line-height: 1; color: var(--electric-orange);
             margin-bottom: 12px; letter-spacing: -0.02em;
         }
-
         .stat-label { font-size: clamp(12px, 1.3vw, 14px); color: var(--muted-white); line-height: 1.4; }
 
         /* About */
@@ -287,25 +271,21 @@
             display: grid; grid-template-columns: 0.9fr 1.1fr;
             gap: clamp(36px, 6vw, 80px); align-items: center;
         }
-
         .about-portrait {
             position: relative; aspect-ratio: 4 / 5;
             border-radius: 24px; overflow: hidden;
             background: var(--slate-gray);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
-
         .about-portrait img {
             width: 100%; height: 100%;
             object-fit: cover; object-position: center top; display: block;
         }
-
         .about-portrait::after {
             content: ''; position: absolute; inset: 0;
             background: linear-gradient(180deg, transparent 55%, rgba(21, 19, 26, 0.65));
             pointer-events: none;
         }
-
         .about-portrait-badge {
             position: absolute; bottom: 18px; left: 18px; z-index: 2;
             background: rgba(21, 19, 26, 0.85);
@@ -314,37 +294,17 @@
             border-radius: 999px; padding: 8px 16px;
             font-size: 12px; letter-spacing: 0.06em; color: var(--off-white);
         }
-
         .about-copy h2 {
             font-family: var(--font-serif); font-weight: 400;
             font-size: clamp(26px, 3.4vw, 40px);
             line-height: 1.15; margin-bottom: 24px;
         }
-
         .about-copy p { color: var(--muted-white); font-size: clamp(15px, 1.6vw, 17px); margin-bottom: 18px; }
         .about-copy p strong { color: var(--off-white); font-weight: 600; }
-
-        .about-facts {
-            display: grid; grid-template-columns: repeat(2, 1fr);
-            gap: 18px; margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .about-fact-number {
-            font-family: var(--font-serif);
-            font-size: clamp(22px, 2.4vw, 28px);
-            color: var(--electric-orange);
-            line-height: 1.1; margin-bottom: 6px;
-        }
-
-        .about-fact-label { font-size: 13px; color: var(--muted-white); }
-
         .about-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
         /* What I Solve */
         .solve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
         .solve-card {
             background: rgba(41, 38, 51, 0.55);
             border: 1px solid rgba(255, 255, 255, 0.07);
@@ -353,48 +313,44 @@
             transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
             position: relative; overflow: hidden;
         }
-
         .solve-card::before {
             content: ''; position: absolute; top: 0; left: 0;
             height: 2px; width: 0;
             background: var(--electric-orange);
             transition: width 0.4s ease;
         }
-
         .solve-card:hover {
             transform: translateY(-6px);
             border-color: rgba(255, 107, 0, 0.35);
             background: rgba(59, 23, 109, 0.25);
         }
-
         .solve-card:hover::before { width: 100%; }
-
         .solve-index {
             font-size: 12px; letter-spacing: 0.2em;
             color: var(--electric-orange);
             font-weight: 700; margin-bottom: 16px;
         }
-
         .solve-card h3 { font-size: clamp(18px, 2vw, 22px); margin-bottom: 12px; }
         .solve-card p { color: var(--muted-white); font-size: 15px; line-height: 1.6; }
 
-        /* Work */
+        /* ============ WORK / CASE STUDIES ============ */
         .work-section { background: linear-gradient(180deg, var(--slate-black), rgba(59, 23, 109, 0.15)); }
 
         .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 
         .work-card {
             position: relative;
-            border-radius: 20px; overflow: hidden;
+            border-radius: 20px;
+            overflow: hidden;
             background: var(--slate-gray);
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: transform 0.35s ease, border-color 0.35s ease;
             display: flex; flex-direction: column;
-            min-height: 340px;
+            min-height: 360px;
         }
 
         .work-card:hover { transform: translateY(-8px); border-color: rgba(255, 107, 0, 0.4); }
-        .work-card.featured { grid-column: span 2; min-height: 460px; }
+        .work-card.featured { grid-column: span 2; min-height: 480px; }
 
         .work-media { position: absolute; inset: 0; z-index: 0; }
         .work-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
@@ -402,10 +358,16 @@
 
         .work-media::after {
             content: ''; position: absolute; inset: 0;
-            background: linear-gradient(180deg, rgba(21, 19, 26, 0.35) 0%, rgba(21, 19, 26, 0.85) 60%, rgba(21, 19, 26, 0.98) 100%);
+            background: linear-gradient(180deg, rgba(21, 19, 26, 0.4) 0%, rgba(21, 19, 26, 0.88) 60%, rgba(21, 19, 26, 0.99) 100%);
         }
 
-        .work-content { position: relative; z-index: 1; margin-top: auto; padding: clamp(24px, 3vw, 40px); }
+        .work-content {
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+            padding: clamp(24px, 3vw, 40px);
+            display: flex; flex-direction: column;
+        }
 
         .work-tag {
             display: inline-block;
@@ -420,27 +382,45 @@
             font-size: clamp(24px, 3vw, 38px);
             margin-bottom: 10px;
         }
-
         .work-card.featured h3 { font-size: clamp(28px, 3.6vw, 46px); }
 
         .work-desc {
             color: var(--muted-white);
             font-size: clamp(14px, 1.5vw, 16px);
-            max-width: 620px; margin-bottom: 22px;
+            max-width: 640px; margin-bottom: 18px;
+        }
+
+        /* NEW: "Proudest Decision" line */
+        .work-decision {
+            font-size: clamp(13px, 1.4vw, 15px);
+            color: var(--off-white);
+            padding: 14px 18px;
+            border-left: 2px solid var(--electric-orange);
+            background: rgba(255, 107, 0, 0.06);
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 20px;
+            max-width: 640px;
+            line-height: 1.55;
+        }
+
+        .work-decision strong {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--electric-orange);
+            font-weight: 700;
+            margin-bottom: 6px;
         }
 
         .work-meta {
             display: flex; flex-wrap: wrap; gap: 10px 26px;
-            margin-bottom: 22px; font-size: 13px;
+            margin-bottom: 18px; font-size: 13px;
         }
-
         .work-meta span { color: var(--muted-white); }
         .work-meta span b { color: var(--off-white); font-weight: 600; margin-left: 4px; }
 
-        .work-outcomes {
-            display: flex; flex-wrap: wrap; gap: 8px 12px;
-            margin-bottom: 22px;
-        }
+        .work-outcomes { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 22px; }
 
         .work-outcomes span {
             font-size: 12px;
@@ -453,6 +433,13 @@
             letter-spacing: 0.02em;
         }
 
+        .work-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
         .work-link {
             display: inline-flex; align-items: center; gap: 8px;
             color: var(--off-white); text-decoration: none;
@@ -460,9 +447,154 @@
             border-bottom: 1px solid transparent;
             padding-bottom: 2px;
             transition: color 0.25s, border-color 0.25s;
+            background: none; border-top: none; border-left: none; border-right: none;
+            cursor: pointer; font-family: inherit;
+        }
+        .work-link:hover { color: var(--electric-orange); border-color: var(--electric-orange); }
+
+        /* Case study toggle */
+        .case-toggle {
+            color: var(--electric-orange);
+            border-bottom: 1px solid rgba(255, 107, 0, 0.4);
+            padding-bottom: 2px;
+        }
+        .case-toggle:hover { color: var(--orange-soft); }
+
+        /* Expandable case study panel */
+        .case-panel {
+            grid-column: span 2;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.6s ease, opacity 0.4s ease, margin 0.4s ease;
+            margin-top: 0;
+        }
+        .case-panel.open {
+            max-height: 3000px;
+            opacity: 1;
+            margin-top: 24px;
         }
 
-        .work-link:hover { color: var(--electric-orange); border-color: var(--electric-orange); }
+        .case-inner {
+            background: linear-gradient(135deg, rgba(59, 23, 109, 0.3), rgba(41, 38, 51, 0.85));
+            border: 1px solid rgba(255, 107, 0, 0.25);
+            border-radius: 22px;
+            padding: clamp(26px, 3.5vw, 48px);
+            position: relative;
+        }
+
+        .case-close {
+            position: absolute;
+            top: 16px; right: 16px;
+            background: rgba(21, 19, 26, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--off-white);
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+        }
+        .case-close:hover {
+            background: rgba(255, 107, 0, 0.15);
+            border-color: rgba(255, 107, 0, 0.5);
+            color: var(--electric-orange);
+        }
+
+        .case-header {
+            margin-bottom: 32px;
+        }
+
+        .case-header .eyebrow { margin-bottom: 10px; }
+
+        .case-header h3 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            font-size: clamp(24px, 3vw, 38px);
+            margin-bottom: 12px;
+        }
+
+        .case-header p {
+            color: var(--muted-white);
+            font-size: clamp(15px, 1.6vw, 17px);
+            max-width: 700px;
+        }
+
+        .case-steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .case-step {
+            background: rgba(21, 19, 26, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            padding: clamp(20px, 2.4vw, 28px);
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .case-step:hover {
+            border-color: rgba(255, 107, 0, 0.35);
+            background: rgba(21, 19, 26, 0.65);
+        }
+
+        .case-step-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--electric-orange);
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .case-step-label .ico {
+            font-size: 14px;
+            filter: grayscale(0);
+        }
+
+        .case-step h4 {
+            font-size: clamp(16px, 1.8vw, 19px);
+            font-weight: 700;
+            color: var(--off-white);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .case-step p {
+            font-size: clamp(14px, 1.5vw, 15px);
+            color: var(--muted-white);
+            line-height: 1.65;
+        }
+
+        .case-step p + p { margin-top: 10px; }
+
+        .case-step strong { color: var(--off-white); font-weight: 600; }
+
+        .case-step.tradeoff { border-left: 3px solid var(--electric-orange); }
+        .case-step.constraint { border-left: 3px solid var(--purple-light); }
+        .case-step.retro { border-left: 3px solid var(--orange-soft); }
+
+        .case-footer {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .case-footer-note {
+            font-size: 13px;
+            color: var(--muted-white);
+            font-style: italic;
+        }
 
         /* Principles */
         .principles-section {
@@ -473,29 +605,32 @@
             display: grid; grid-template-columns: repeat(5, 1fr);
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
-
         .principle {
             padding: clamp(22px, 2.6vw, 34px) clamp(14px, 1.6vw, 24px);
             border-right: 1px solid rgba(255, 255, 255, 0.08);
         }
-
         .principle:last-child { border-right: none; }
-
         .principle-number {
             font-size: 12px; letter-spacing: 0.2em;
             color: var(--electric-orange);
             font-weight: 700; margin-bottom: 20px;
         }
-
         .principle h3 { font-size: clamp(17px, 1.7vw, 20px); margin-bottom: 10px; }
         .principle p { font-size: 14px; color: var(--muted-white); line-height: 1.55; }
+        .principle p.example {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            font-style: italic;
+            font-size: 13px;
+            color: var(--muted-white);
+        }
 
         /* Coaching */
         .coaching-section {
             background: linear-gradient(135deg, var(--deep-purple) 0%, #2A114E 60%, var(--slate-black) 100%);
             position: relative; overflow: hidden;
         }
-
         .coaching-section::before {
             content: ''; position: absolute;
             top: -80px; right: -80px;
@@ -504,65 +639,51 @@
             background: radial-gradient(circle, var(--orange-glow), transparent 65%);
             opacity: 0.5; pointer-events: none;
         }
-
         .coaching-inner {
             position: relative; z-index: 1;
             display: grid; grid-template-columns: 1.2fr 1fr;
             gap: clamp(36px, 5vw, 72px); align-items: center;
         }
-
         .coaching-inner h2 {
             font-family: var(--font-serif); font-weight: 400;
             font-size: clamp(28px, 3.8vw, 46px);
             line-height: 1.12; margin-bottom: 22px;
         }
-
         .coaching-inner p {
             color: rgba(247, 244, 250, 0.82);
             font-size: clamp(15px, 1.6vw, 17px);
             margin-bottom: 26px; max-width: 560px;
         }
-
         .coaching-list {
             display: grid; grid-template-columns: 1fr 1fr;
             gap: 14px 24px; margin-bottom: 32px; list-style: none;
         }
-
         .coaching-list li {
             display: flex; align-items: center; gap: 10px;
             font-size: 14px; color: var(--off-white);
         }
-
         .coaching-list li::before {
             content: ''; width: 6px; height: 6px;
             border-radius: 50%; background: var(--electric-orange);
             flex-shrink: 0; box-shadow: 0 0 10px var(--orange-glow);
         }
-
         .coaching-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
         .coaching-stat {
             background: rgba(21, 19, 26, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 18px; padding: 24px 20px;
             backdrop-filter: blur(8px);
         }
-
         .coaching-stat-number {
             font-family: var(--font-serif);
             font-size: clamp(28px, 3.2vw, 40px);
             color: var(--electric-orange);
             line-height: 1; margin-bottom: 8px;
         }
-
         .coaching-stat-label { font-size: 13px; color: var(--muted-white); line-height: 1.4; }
 
         /* Testimonials */
-        .testimonials-section {
-            background: var(--deep-purple);
-            position: relative; overflow: hidden;
-        }
-
+        .testimonials-section { background: var(--deep-purple); position: relative; overflow: hidden; }
         .testimonials-section::before {
             content: ''; position: absolute;
             bottom: -120px; left: -120px;
@@ -571,13 +692,11 @@
             background: radial-gradient(circle, rgba(255, 107, 0, 0.22), transparent 65%);
             pointer-events: none;
         }
-
         .testimonials-grid {
             position: relative; z-index: 1;
             display: grid; grid-template-columns: repeat(3, 1fr);
             gap: 22px;
         }
-
         .testimonial {
             background: rgba(21, 19, 26, 0.28);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -587,28 +706,23 @@
             backdrop-filter: blur(6px);
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
-
         .testimonial:hover { transform: translateY(-6px); background: rgba(21, 19, 26, 0.42); }
-
         .quote-mark {
             font-family: var(--font-serif);
             font-size: 56px; line-height: 0.6;
             color: var(--electric-orange);
             margin-bottom: 18px;
         }
-
         .testimonial-text {
             font-size: clamp(15px, 1.6vw, 17px);
             color: var(--off-white);
             line-height: 1.6; margin-bottom: 26px; flex-grow: 1;
         }
-
         .testimonial-author { font-weight: 700; font-size: 15px; color: var(--off-white); }
         .testimonial-role { font-size: 13px; color: var(--muted-white); margin-top: 2px; }
 
         /* Writing */
         .writing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-
         .writing-card {
             background: rgba(41, 38, 51, 0.55);
             border: 1px solid rgba(255, 255, 255, 0.07);
@@ -618,25 +732,21 @@
             transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
             display: flex; flex-direction: column; min-height: 180px;
         }
-
         .writing-card:hover {
             transform: translateY(-5px);
             border-color: rgba(255, 107, 0, 0.35);
             background: rgba(59, 23, 109, 0.22);
         }
-
         .writing-card h3 {
             font-family: var(--font-serif); font-weight: 400;
             font-size: clamp(19px, 2vw, 24px);
             line-height: 1.25; margin-bottom: 16px;
         }
-
         .writing-card .read {
             margin-top: auto; font-size: 13px;
             font-weight: 600; color: var(--electric-orange);
             display: inline-flex; align-items: center; gap: 6px;
         }
-
         .writing-more { margin-top: 34px; text-align: center; }
 
         /* Contact */
@@ -644,35 +754,28 @@
             background: radial-gradient(circle at 85% 15%, var(--purple-glow), transparent 42%), var(--slate-black);
             position: relative; overflow: hidden;
         }
-
         .contact-grid {
             display: grid; grid-template-columns: 1fr 1fr;
             gap: clamp(36px, 5vw, 72px); align-items: start;
         }
-
         .contact-copy h2 {
             font-family: var(--font-serif); font-weight: 400;
             font-size: clamp(30px, 4vw, 52px);
             line-height: 1.1; margin-bottom: 20px;
         }
-
         .contact-copy p {
             color: var(--muted-white);
             font-size: clamp(15px, 1.6vw, 17px);
             max-width: 480px; margin-bottom: 30px;
         }
-
         .contact-direct { display: flex; flex-direction: column; gap: 14px; margin-bottom: 34px; }
-
         .contact-direct a {
             display: inline-flex; align-items: center; gap: 10px;
             color: var(--off-white); text-decoration: none;
             font-weight: 600; font-size: 15px;
             transition: color 0.25s; width: fit-content;
         }
-
         .contact-direct a:hover { color: var(--electric-orange); }
-
         .contact-direct a .ico {
             width: 34px; height: 34px;
             border-radius: 50%;
@@ -682,7 +785,6 @@
             font-size: 14px;
             transition: background-color 0.25s, border-color 0.25s;
         }
-
         .contact-direct a:hover .ico { background: rgba(255, 107, 0, 0.14); border-color: rgba(255, 107, 0, 0.5); }
 
         .contact-form {
@@ -691,16 +793,13 @@
             border-radius: 22px;
             padding: clamp(24px, 3vw, 38px);
         }
-
         .form-group { margin-bottom: 18px; }
-
         .form-group label {
             display: block; color: var(--muted-white);
             margin-bottom: 8px; font-size: 13px;
             font-weight: 600; letter-spacing: 0.04em;
             text-transform: uppercase;
         }
-
         .form-group input,
         .form-group textarea {
             width: 100%; padding: 14px 16px;
@@ -711,18 +810,14 @@
             font-family: var(--font-sans);
             transition: border-color 0.25s, background-color 0.25s;
         }
-
         .form-group input::placeholder,
         .form-group textarea::placeholder { color: rgba(184, 178, 194, 0.5); }
-
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none; border-color: var(--electric-orange);
             background: rgba(21, 19, 26, 0.85);
         }
-
         .form-group textarea { height: 130px; resize: vertical; min-height: 100px; }
-
         .submit-btn {
             background: var(--electric-orange);
             color: var(--slate-black);
@@ -733,7 +828,6 @@
             transition: background-color 0.25s, transform 0.25s;
             width: 100%;
         }
-
         .submit-btn:hover { background: var(--orange-soft); transform: translateY(-2px); }
 
         /* Footer */
@@ -743,28 +837,21 @@
             padding: 44px 0 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
-
         .footer-content {
             display: flex; flex-direction: column;
             gap: 22px; align-items: center; text-align: center;
         }
-
         .footer-logo {
             font-weight: 800; letter-spacing: 0.06em;
             font-size: 16px; text-transform: uppercase;
         }
-
         .footer-role { font-size: 13px; color: var(--muted-white); margin-top: -14px; }
-
         .social-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
-
         .social-links a {
             color: var(--muted-white); text-decoration: none;
             font-size: 14px; transition: color 0.25s;
         }
-
         .social-links a:hover { color: var(--electric-orange); }
-
         .footer-copy {
             font-size: 12px; color: var(--muted-white);
             padding-top: 22px;
@@ -786,6 +873,7 @@
             .principle:last-child { border-bottom: none; }
 
             .testimonials-grid { grid-template-columns: 1fr; }
+            .case-steps { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 860px) {
@@ -794,6 +882,7 @@
 
             .work-grid { grid-template-columns: 1fr; }
             .work-card.featured { grid-column: span 1; min-height: 380px; }
+            .case-panel { grid-column: span 1; }
 
             .coaching-inner { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -802,7 +891,6 @@
 
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
-
             nav ul {
                 display: none;
                 position: absolute; top: 100%; left: 0;
@@ -814,7 +902,6 @@
                 padding: 16px; gap: 6px;
                 border-top: 1px solid rgba(255, 255, 255, 0.08);
             }
-
             nav ul.active { display: flex; }
             nav a.nav-link { padding: 12px 16px; }
             .btn-nav { margin: 8px 0 0 0; justify-content: center; }
@@ -830,22 +917,20 @@
             .coaching-list { grid-template-columns: 1fr; }
 
             .hero-cta .btn { width: 100%; justify-content: center; }
+
+            .case-steps { grid-template-columns: 1fr; gap: 16px; }
         }
 
         @media (max-width: 480px) {
             .container { padding: 0 16px; }
-
             .stats-grid { grid-template-columns: 1fr; }
             .stat { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
             .stat:last-child { border-bottom: none; }
-
-            .about-facts { grid-template-columns: 1fr; }
-
             .work-card { min-height: 300px; }
             .work-card.featured { min-height: 340px; }
-
             .coaching-visual { grid-template-columns: 1fr; }
             .writing-card { min-height: auto; }
+            .case-inner { padding: 22px; }
         }
     </style>
 </head>
@@ -861,7 +946,7 @@
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#solve" class="nav-link">What I Solve</a></li>
                     <li><a href="#work" class="nav-link">Work</a></li>
-                    <li><a href="#principles" class="nav-link">Principles</a></li>
+                    <li><a href="#decide" class="nav-link">How I Decide</a></li>
                     <li><a href="#coaching" class="nav-link">Coaching</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                     <li><a href="services.html" class="btn btn-primary btn-nav" target="_blank">Book a Service</a></li>
@@ -878,19 +963,19 @@
                 <span class="eyebrow">Product/Project Manager · Consultant · Scrum Master</span>
                 <h1>I turn complex problems into products, systems &amp; <span class="hl">better ways of working.</span></h1>
                 <p class="hero-lead">
-                    I'm Nsisong Uko, a Product/Project Manager and Consultant helping teams turn business
-                    problems into clear product strategies, practical workflows and user-focused solutions.
+                    I'm Nsisong Uko, I don't just ship features. I make the messy decisions behind them:
+                    what to build, what to skip, what to fight for, and what to walk away from. Here's how I think.
                 </p>
                 <div class="hero-cta">
-                    <a href="#work" class="btn btn-primary">View My Work <span class="btn-arrow">→</span></a>
+                    <a href="#work" class="btn btn-primary">See How I Think <span class="btn-arrow">→</span></a>
                     <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
                 </div>
                 <div class="hero-tags">
                     <span>Product Strategy</span>
                     <span>Discovery</span>
+                    <span>Decision-Making</span>
+                    <span>Trade-offs</span>
                     <span>Delivery</span>
-                    <span>Product/Project Operations</span>
-                    <span>Coaching</span>
                 </div>
             </div>
         </div>
@@ -941,86 +1026,86 @@
                         and eventually began helping other professionals make the same transition.
                     </p>
                     <p>
-                        Today, I work across product management, consulting and product education bringing together
+                        Today, I work across product management, consulting and product education, bringing together
                         strategy, execution, systems thinking and human-centered problem solving for startups across
                         real estate, edtech, logistics, sports entertainment and business operations.
                     </p>
-                    <div class="about-facts">
-                         <div>
-                            <div class="about-fact-number">Best Grad</div>
-                            <div class="about-fact-label">HerTechTrail PM Cohort 6</div>
-                        </div>
-                    </div>
+                    <p>
+                        What I bring isn't a list of features I've shipped. It's the <strong>judgment behind the decisions</strong>
+                        knowing which feature to fight for, which to cut, and which to delay until you have better data.
+                    </p>
                     <div class="about-actions">
-                        <a href="#" class="btn btn-primary">Download Resume</a>
-                        <a href="mailto:ukonsisong@gmail.com" class="btn btn-secondary">Let's Collaborate Together</a>
+                        <a href="#work" class="btn btn-primary">See how I think <span class="btn-arrow">→</span></a>
+                        <a href="mailto:ukonsisong@gmail.com" class="btn btn-secondary">Let's Collaborate</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== What I Do ========== -->
+    <!-- ========== What I Help Teams Do ========== -->
     <section class="section solve-section" id="solve">
         <div class="container">
             <div class="section-head">
                 <span class="eyebrow section-eyebrow">What I Help Teams Do</span>
                 <h2 class="section-title">Problems worth solving, solved well.</h2>
                 <p class="section-sub">
-                    From ambiguous ideas to shipped products, I help teams bring clarity, structure and momentum to the
-                    hardest parts of product work.
+                    From ambiguous ideas to shipped products, I help teams bring clarity, structure and momentum
+                    to the hardest parts of product work.
                 </p>
             </div>
             <div class="solve-grid">
                 <article class="solve-card">
                     <div class="solve-index">01</div>
                     <h3>Product Discovery</h3>
-                    <p>Turning ambiguous ideas and problems into clearly defined opportunities.</p>
+                    <p>Turning ambiguous ideas into clearly defined opportunities, before i write a single ticket.</p>
                 </article>
                 <article class="solve-card">
                     <div class="solve-index">02</div>
                     <h3>Product Strategy</h3>
-                    <p>Connecting user needs, business goals and product priorities.</p>
+                    <p>Connecting user needs, business goals and product priorities into a roadmap that actually holds up.</p>
                 </article>
                 <article class="solve-card">
                     <div class="solve-index">03</div>
                     <h3>MVP &amp; Prioritization</h3>
-                    <p>Finding the smallest useful solution without losing sight of the bigger vision.</p>
+                    <p>Finding the smallest useful thing without losing the vision, and without pretending MVP is "minimum effort."</p>
                 </article>
                 <article class="solve-card">
                     <div class="solve-index">04</div>
                     <h3>Product Delivery</h3>
-                    <p>Turning requirements into actionable work for design and engineering teams.</p>
+                    <p>Turning requirements into actionable work for design and engineering, with fewer hand-offs and fewer surprises.</p>
                 </article>
                 <article class="solve-card">
                     <div class="solve-index">05</div>
                     <h3>Workflow &amp; Operations</h3>
-                    <p>Making messy business processes clearer, measurable and easier to manage.</p>
+                    <p>Making messy business processes clearer, measurable, and easier to run at scale.</p>
                 </article>
                 <article class="solve-card">
                     <div class="solve-index">06</div>
                     <h3>Product Coaching</h3>
-                    <p>Helping aspiring and transitioning PMs develop practical product skills.</p>
+                    <p>Helping aspiring and transitioning PMs develop the judgment behind the decisions, not just the buzzwords.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- ========== Selected Work ========== -->
+    <!-- ========== Selected Work + Case Studies ========== -->
     <section class="section work-section" id="work">
         <div class="container">
             <div class="section-head">
-                <span class="eyebrow section-eyebrow">Selected Work</span>
-                <h2 class="section-title">Ideas I've brought to life.</h2>
+                <span class="eyebrow section-eyebrow">Selected Work · How I Think</span>
+                <h2 class="section-title">Not just what I built but how I decided.</h2>
                 <p class="section-sub">
-                    A selection of platforms, products and systems I've helped shape from discovery through delivery.
+                    Anyone can show a polished case study. The interesting part is the messy decisions behind it.
+                    Click <strong>"How I thought through this"</strong> on any project to see the problem, the trade-offs,
+                    the constraints, and what i did differently.
                 </p>
             </div>
 
             <div class="work-grid">
 
-                <!-- FEATURED: Socioknack -->
-                <article class="work-card featured">
+                <!-- ============ FEATURED: Socioknack ============ -->
+                <article class="work-card featured" data-project="socioknack">
                     <div class="work-media">
                         <img src="images/SOCIOKNACK 2.png" alt="Socioknack — Sales Enablement" loading="lazy">
                     </div>
@@ -1028,24 +1113,120 @@
                         <span class="work-tag">Sales Enablement · Web + Mobile</span>
                         <h3>Socioknack</h3>
                         <p class="work-desc">
-                            Turning fragmented field-sales processes into a structured digital workflow - onboarding,
-                            sales tracking, commission logic and rewards management for sales agents.
+                            Turning fragmented field-sales processes into a structured digital workflow of
+                            onboarding, sales tracking, commission logic and rewards for field agents.
                         </p>
+                        <div class="work-decision">
+                            <strong>The decision I'm proudest of</strong>
+                            I argued against shipping a real-time commission calculator in the MVP. The team wanted it,
+                            but we didn't yet know how agents actually behaved. Shipping a <em>manual</em> approval step
+                            first gave us the behavioral data to design the automated version correctly.
+                        </div>
                         <div class="work-meta">
                             <span><b>Role:</b> Product Manager</span>
                             <span><b>Company:</b> Seal Richards</span>
+                            <span><b>Stage:</b> Early MVP</span>
                         </div>
-                        <div class="work-outcomes">
-                            <span>Early MVP </span>
-                            <span>Onboarding + sales tracking</span>
-                            <span>Commission &amp; rewards logic</span>
+                        <div class="work-actions">
+                            <button class="work-link case-toggle" data-target="socioknack">
+                                How I thought through this <span class="btn-arrow">→</span>
+                            </button>
                         </div>
-                        <a href="#contact" class="work-link">View Case Study <span class="btn-arrow">→</span></a>
                     </div>
                 </article>
 
-                <!-- TruthHub -->
-                <article class="work-card">
+                <!-- Socioknack case study -->
+                <div class="case-panel" id="socioknack">
+                    <div class="case-inner">
+                        <button class="case-close" aria-label="Close">✕</button>
+                        <div class="case-header">
+                            <span class="eyebrow">Case Study · Socioknack</span>
+                            <h3>Building sales enablement for agents nobody had designed for</h3>
+                            <p>
+                                Seal Richards had a field-sales operation running on WhatsApp and spreadsheets. We were
+                                building Socioknack to replace it, but the first question wasn't "what features?"
+                                It was "what are we even replacing?"
+                            </p>
+                        </div>
+
+                        <div class="case-steps">
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🔍</span> The Problem</div>
+                                <h4>The real problem wasn't the tool. It was the feedback loop.</h4>
+                                <p>
+                                    Sales agents were logging visits on WhatsApp, commissions were being calculated
+                                    by hand, and nobody could tell whether an agent was actually doing the work or
+                                    just saying they were. Leadership wanted "a sales app." The real problem was
+                                    <strong>trust in field operations</strong>.
+                                </p>
+                            </div>
+
+                            <div class="case-step constraint">
+                                <div class="case-step-label"><span class="ico">🚧</span> The Constraints</div>
+                                <h4>Low-trust environment, high-turnover agents, no historical data.</h4>
+                                <p>
+                                    Agents worked in an environment where <strong>verified check-ins</strong> mattered more
+                                    than pretty UI. Turnover was high, so any onboarding flow had to work for someone
+                                    using the app for the very first time, on a low-end Android, on unreliable data.
+                                    And we had <strong>no historical data</strong> on how commissions actually got calculated.
+                                </p>
+                            </div>
+
+                            <div class="case-step tradeoff">
+                                <div class="case-step-label"><span class="ico">⚖️</span> The Trade-off</div>
+                                <h4>Ship a manual approval step, or ship the shiny automation?</h4>
+                                <p>
+                                    The team wanted a full rules engine — commission tiers, bonuses, streaks, penalties,
+                                    auto-calculated and paid out. I argued the opposite: <strong>ship a manual approval
+                                    step first</strong>. Let an admin approve every commission with one tap. It would be
+                                    slower, uglier, and less "productive." But it would force us to learn how
+                                    commissions actually got calculated in the messy real world before we automated
+                                    the wrong rules.
+                                </p>
+                            </div>
+
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🎯</span> The Call</div>
+                                <h4>Design for the admin, not the agent, in v1.</h4>
+                                <p>
+                                    Most sales apps obsess over the agent's experience. We flipped it: the MVP
+                                    prioritized the <strong>admin dashboard</strong> because that's where the trust problem
+                                    lived. Agents got a minimal check-in flow. The admin got visibility, override,
+                                    and audit logs.
+                                </p>
+                            </div>
+
+                           <div class="case-step">
+    <div class="case-step-label"><span class="ico">📈</span> What Happened</div>
+    <h4>The manual step paid off — not as a feature, as a research instrument.</h4>
+    <p>
+        Within one week of usability testing, we discovered something nobody had documented: commissions weren't one
+        system, they were <strong>at least four different systems running at once</strong>.
+    </p>
+    <p>
+        Some agents earned a <strong>flat percentage</strong> of every sale. Others earned a <strong>fixed
+        fee per closed deal</strong>, regardless of value. A third group had <strong>custom arrangements</strong>. And a fourth group was on <strong>instalmental
+        payment plans</strong>, where the commission itself was split across weeks or months depending on
+        when the customer actually paid.
+    </p>
+    <p>
+        The manual approval step surfaced all of it and saved us from building an automation engine that would have been wrong.
+    </p>
+</div>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="case-footer">
+                            <span class="case-footer-note">Currently in early MVP</span>
+                            <a href="#contact" class="work-link">Discuss this project <span class="btn-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ TruthHub ============ -->
+                <article class="work-card" data-project="truthhub">
                     <div class="work-media">
                         <img src="images/TRUTHHUB.jpeg" alt="TruthHub — Safety & Assurance Platform" loading="lazy">
                     </div>
@@ -1053,47 +1234,161 @@
                         <span class="work-tag">Safety &amp; Assurance · Web + Mobile</span>
                         <h3>TruthHub</h3>
                         <p class="work-desc">
-                            Delivered from discovery to MVP features in under 4 months. A safety and assurance platform
-                            built for verified field operations and multi-family security.
+                            Delivered from discovery to MVP features in under 4 months, a safety and assurance
+                            platform built for verified field operations and multi-family security.
                         </p>
+                        <div class="work-decision">
+                            <strong>The decision I'm proudest of</strong>
+                            When the client asked for "real-time GPS tracking everywhere," I pushed back and
+                            narrowed it to <em>verified check-ins + escalation windows</em>. Full tracking drained
+                            batteries and eroded agent trust without solving the actual safety problem.
+                        </div>
                         <div class="work-meta">
                             <span><b>Role:</b> Project Manager</span>
                             <span><b>Company:</b> Seal Richards</span>
                         </div>
                         <div class="work-outcomes">
-                            <span>10+ core features shipped</span>
-                            <span>Discovery → completion in 4 months</span>
-                            <span>Verified agent visits + GPS tracking</span>
+                            <span>10+ core features</span>
+                            <span>Discovery → Development in 4 months</span>
+                            <span>Verified visits + escalation flows</span>
                         </div>
-                        <a href="#contact" class="work-link">View Case Study <span class="btn-arrow">→</span></a>
+                        <div class="work-actions">
+                            <button class="work-link case-toggle" data-target="truthhub">
+                                How I thought through this <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Eko Crib -->
-                <article class="work-card">
-                    <div class="work-media">
-                        <img src="images/EKOCRIB.jpg" alt="Eko Crib" loading="lazy">
-                    </div>
-                    <div class="work-content">
-                        <span class="work-tag">Real Estate · Web</span>
-                        <h3>Eko Crib</h3>
-                        <p class="work-desc">
-                            Made house hunting easier for Lagos residents. Beta launched with strong early traction.
-                        </p>
-                        <div class="work-meta">
-                            <span><b>Role:</b> Product Manager / Head of Operations</span>
-                        </div>
-                        <div class="work-outcomes">
-                            <span>200+ signups in 2 weeks</span>
-                            <span>+40% homepage conversion</span>
-                            <span>35% faster iteration</span>
-                        </div>
-                        <a href="https://www.ekocrib.com/" target="_blank" class="work-link">View Live Product <span class="btn-arrow">→</span></a>
-                    </div>
-                </article>
+                <!-- TruthHub case study -->
+               <div class="case-panel" id="truthhub">
+    <div class="case-inner">
+        <button class="case-close" aria-label="Close">✕</button>
+        <div class="case-header">
+            <span class="eyebrow">Case Study · TruthHub</span>
+            <h3>Designing a safety platform where trust is the actual product</h3>
+            <p>
+                TruthHub combined three services under one brand; physical wellness checks ("Knocking"),
+                real-time travel safety ("Check-In"), and digital fact verification. The hard part wasn't
+                building three products. It was making four different user roles feel safe using the same system.
+            </p>
+        </div>
 
-                <!-- Sportverse -->
-                <article class="work-card">
+        <div class="case-steps">
+            <div class="case-step">
+                <div class="case-step-label"><span class="ico">🔍</span> The Problem</div>
+                <h4>Nigerians lack a single, integrated tool for physical safety AND digital trust.</h4>
+                <p>
+                    Existing options were fragmented: private security for physical checks, WhatsApp for family
+                    coordination, random fact-check sites for misinformation. <strong>No product connected them.</strong>
+                    The cost wasn't just convenience, it was that families in the diaspora had no reliable way
+                    to verify their loved ones back home were okay.
+                </p>
+                <p>
+                    Target users spanned <strong>diaspora guardians, elderly living alone, solo travelers, corporate
+                    field staff, university students, and NYSC members</strong>, each with different needs and
+                    different expectations of what "safety" means.
+                </p>
+            </div>
+
+            <div class="case-step constraint">
+                <div class="case-step-label"><span class="ico">🚧</span> The Constraints</div>
+                <h4>Four user roles, three services, one MVP launch, with one service deliberately shelved.</h4>
+                <p>
+                    The product had to serve <strong>Clients, Hosts/Receivers, Agents, and Admins</strong>, each
+                    with a fundamentally different mental model of the product. On top of that:
+                </p>
+                <p>
+                    <strong>Launch timeline:</strong> Roughly three months from research to internal QA.
+                </p>
+                <p>
+                    <strong>Fact-Checking</strong> was planned but couldn't ship in MVP. So it needed to be visible
+                    in the UI as <em>"Coming Soon"</em> without confusing users or breaking trust in what was live.
+                </p>
+                <p>
+                    <strong>Emergency scenarios</strong>; panic buttons, missed check-ins, no-response alerts
+                    had to work reliably <em>on day one</em>. In a safety product, failure isn't a bug; it's a
+                    real-world injury.
+                </p>
+            </div>
+
+            <div class="case-step tradeoff">
+                <div class="case-step-label"><span class="ico">⚖️</span> The Trade-off</div>
+                <h4>Build one unified experience across three services or keep them separate?</h4>
+                <p>
+                    The obvious approach was to build three mini-products, each with its own flow. It would ship
+                    faster and each team could work independently.
+                </p>
+                <p>
+                    But that would break the core promise: a diaspora guardian shouldn't have to learn three
+                    different mental models. If Knocking lived here and Check-In lived there, <strong>families
+                    would always be guessing where to look during an emergency.</strong>
+                </p>
+                <p>
+                    The trade-off was that a unified experience meant <strong>more design work, more shared components,
+                    and more coordination</strong> with the same three-month window.
+                </p>
+            </div>
+
+            <div class="case-step">
+                <div class="case-step-label"><span class="ico">🎯</span> The Call</div>
+                <h4>Unify the shell, differentiate the services, ship Fact-Checking as "Coming Soon."</h4>
+                <p>
+                    I structured TruthHub as <strong>one navigation, three clearly-labeled services</strong>. The app's
+                    main menu shows all three products:Knocking, Check-In, and Fact-Checking, with the
+                    inactive one visibly staged as <em>"Coming Soon"</em> rather than hidden.
+                </p>
+                <p>
+                    This did three things at once: it kept users oriented (one app, one mental model), it built
+                    anticipation for the future service, and it let us <strong>ship MVP without compromising the
+                    brand story</strong> we were promising.
+                </p>
+                <p>
+                    Internally, the MVP prioritized the two services where failure has the highest human cost:
+                    <strong>Knocking</strong> (physical visits to loved ones) and <strong>Check-In</strong> (real-time
+                    travel safety). Fact-Checking was deferred to V2 with a clear roadmap.
+                </p>
+            </div>
+
+            <div class="case-step constraint">
+                <div class="case-step-label"><span class="ico">🧩</span> What Shaped The Design</div>
+                <h4>Four user roles meant four different definitions of "safe."</h4>
+                <p>
+                    <strong>Clients</strong> (diaspora guardians, parents, travelers) needed <em>visibility and control</em> - they had to know their loved ones were safe, see the history of visits, and manage reports, alerts, scheduling, wallet.
+                </p>
+                <p>
+                    <strong>Hosts/Receivers</strong> (elderly users, students, NYSC members) needed <em>dignity and
+                    predictability</em>. They had to know when someone was coming, verify the agent's identity
+                    before opening the door, and not feel surveilled.
+                </p>
+                <p>
+                    <strong>Agents</strong> (field staff) needed <em>efficiency and protection</em>. Clear assignments,
+                    offline-capable reporting, and a way to escalate when something felt wrong on their end.
+                </p>
+                <p>
+                    <strong>Admins</strong> needed <em>oversight without chaos</em>. A dashboard to assign, reschedule,
+                    respond to alerts, and audit reports, all in real time.
+                </p>
+                <p>
+                    The feature set wasn't designed around services. It was designed around making <strong>each of
+                    these four roles feel in control</strong>, sometimes with completely different UI in the same app.
+                </p>
+            </div>
+
+            
+        </div>
+
+        <div class="case-footer">
+            <span class="case-footer-note">Currently in production at Seal Richards.</span>
+            <a href="#contact" class="work-link">Discuss this project <span class="btn-arrow">→</span></a>
+        </div>
+    </div>
+</div>
+                </div>
+
+                
+                <!-- ============ Sportverse ============ -->
+                <article class="work-card" data-project="sportverse">
                     <div class="work-media">
                         <img src="images/SPORTVERSE.jpg" alt="Sportverse" loading="lazy">
                     </div>
@@ -1102,22 +1397,107 @@
                         <h3>Sportverse</h3>
                         <p class="work-desc">
                             A virtual sports betting app with real odds, fantasy leagues, trivia and prizes.
-                            Delivered MVP in under 90 days.
+                            MVP delivered in under 90 days.
                         </p>
+                        <div class="work-decision">
+                            <strong>The decision I'm proudest of</strong>
+                            When regulation blocked real-money betting, instead of pausing the product I reframed
+                            the entire MVP around <em>non-monetary competition</em> points, streaks, bragging rights.
+                            Same engine, new frame, zero regulatory exposure.
+                        </div>
                         <div class="work-meta">
                             <span><b>Role:</b> Product Manager</span>
                             <span><b>Company:</b> Zuvo Limited</span>
                         </div>
                         <div class="work-outcomes">
-                            <span>MVP in under 90 days</span>
-                            <span>Non-monetary betting focus</span>
+                            <span>MVP Shipped</span>
+                            <span>Non-monetary betting model</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.zuvo.sportverse&pcampaignid=web_share" target="_blank" class="work-link">View Live Product <span class="btn-arrow">→</span></a>
+                        <div class="work-actions">
+                            <button class="work-link case-toggle" data-target="sportverse">
+                                How I thought through this <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
                     </div>
                 </article>
 
-                <!-- HerTechTrail -->
-                <article class="work-card">
+                <!-- Sportverse case study -->
+                <div class="case-panel" id="sportverse">
+                    <div class="case-inner">
+                        <button class="case-close" aria-label="Close">✕</button>
+                        <div class="case-header">
+                            <span class="eyebrow">Case Study · Sportverse</span>
+                            <h3>When the business model gets blocked, redesign the frame not the feature list</h3>
+                            <p>
+                                Sportverse was pitched as a virtual sports betting app. Mid-sprint, regulatory
+                                risk around real-money betting killed the business model. We limited time
+                                the team needed a decision.
+                            </p>
+                        </div>
+
+                        <div class="case-steps">
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🔍</span> The Problem</div>
+                                <h4>The value proposition was legal exposure.</h4>
+                                <p>
+                                    "Virtual sports betting" sounds clever until you realize regulators read that
+                                    as "unlicensed betting." The launch-blocking risk wasn't technical  it was
+                                    that <strong>the entire pitch required a licensing regime we didn't have</strong>.
+                                </p>
+                            </div>
+
+                            <div class="case-step constraint">
+                                <div class="case-step-label"><span class="ico">🚧</span> The Constraints</div>
+                                <h4>Limited tine, pre-regulatory environment, and an engineering team ready to build.</h4>
+                                <p>
+                                    Pausing the product meant losing the team. Continuing as-is meant launching
+                                    something that might get shut down. We had to find the version of this product that could ship.
+                                </p>
+                            </div>
+
+                            <div class="case-step tradeoff">
+                                <div class="case-step-label"><span class="ico">⚖️</span> The Trade-off</div>
+                                <h4>Delay launch for a betting license, or reframe the entire product?</h4>
+                                <p>
+                                    Licensing could take 12+ months. Delaying meant losing momentum, team, and patience. Reframing meant <em>throwing out the pitch deck</em> but
+                                    keeping the engine.
+                                </p>
+                            </div>
+
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🎯</span> The Call</div>
+                                <h4>Keep the betting engine. Swap the money for status.</h4>
+                                <p>
+                                    The core mechanics (odds, prediction, streaks) had nothing to do with cash.
+                                    We replaced currency with <strong>points, badges, leaderboards and bragging
+                                    rights</strong>. Fantasy leagues, trivia, prizes, all preserved. Real-money
+                                    betting completely removed. <strong>Same engine, new frame.</strong>
+                                </p>
+                            </div>
+
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">📈</span> What Happened</div>
+                                <h4>Shipped MVP, zero regulatory exposure, and a fundamentally more loyal user base.</h4>
+                                <p>
+                                    The non-monetary version attracted users who'd never touch a betting app,
+                                    casual sports fans who wanted to prove they knew more than their friends.
+                                    A different audience than we'd planned for and arguably a better one.
+                                </p>
+                            </div>
+
+                            
+                            </div>
+                        </div>
+
+                        <div class="case-footer">
+                            <span class="case-footer-note">Live on Google Play · Zuvo Limited</span>
+                            <a href="https://play.google.com/store/apps/details?id=com.zuvo.sportverse&pcampaignid=web_share" target="_blank" class="work-link">View live product <span class="btn-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ HerTechTrail ============ -->
+                <article class="work-card" data-project="ht">
                     <div class="work-media">
                         <img src="images/HERTECHTRAIL.jpg" alt="HerTechTrail" loading="lazy">
                     </div>
@@ -1125,22 +1505,283 @@
                         <span class="work-tag">EdTech · Coaching</span>
                         <h3>HerTechTrail</h3>
                         <p class="work-desc">
-                            Building Edtech solutions including academy website, LMS and event platform.
+                            Building EdTech solutions including academy website, LMS and event platform.
+                            +60% learner engagement and 200+ interns mentored.
                         </p>
+                        <div class="work-decision">
+                            <strong>The decision I'm proudest of</strong>
+                            Instead of redesigning the whole academy at once, I picked the <em>three</em> drop-off
+                            moments from analytics and shipped targeted fixes.
+                        </div>
                         <div class="work-meta">
                             <span><b>Role:</b> Product Manager / Coach</span>
                         </div>
                         <div class="work-outcomes">
                             <span>+60% learner engagement</span>
                             <span>+40% Techherfest24 registrations</span>
-                            <span>200+ interns mentored</span>
+                            <span>400+ interns mentored</span>
                         </div>
-                        <a href="https://events.hertechtrail.org/" target="_blank" class="work-link">View Live Product <span class="btn-arrow">→</span></a>
+                        <div class="work-actions">
+                            <button class="work-link case-toggle" data-target="ht">
+                                How I thought through this <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Teeket -->
-                <article class="work-card">
+                <!-- HerTechTrail case study -->
+<div class="case-panel" id="ht">
+    <div class="case-inner">
+        <button class="case-close" aria-label="Close">✕</button>
+        <div class="case-header">
+            <span class="eyebrow">Case Study · HerTechTrail</span>
+            <h3>Why learners kept dropping off at week 6 and what one A/B test taught me</h3>
+            <p>
+                HerTechTrail ran 12-week product management cohorts. Graduation rates were being hit hardest
+                by a specific drop-off window. Learners who made it to week 6 or 7, then disappeared before
+                finishing. The problem wasn't acquisition. It was the middle of the journey.
+            </p>
+        </div>
+
+        <div class="case-steps">
+            <div class="case-step">
+                <div class="case-step-label"><span class="ico">🔍</span> The Problem</div>
+                <h4>Learners were surviving the ramp-up, then vanishing at weeks 6–7.</h4>
+                <p>
+                    Early cohort data showed the same pattern repeating: strong attendance and engagement in
+                    weeks 1–5, then an <strong> exit at weeks 6–7</strong>. These learners had already invested six weeks. They weren't quitting because the
+                    course was hard. <strong>Something about the middle of the program was breaking them.</strong>
+                </p>
+                
+            </div>
+
+            <div class="case-step constraint">
+                <div class="case-step-label"><span class="ico">🚧</span> The Constraints</div>
+                <h4>Small team, live cohorts mid-flight, and no freedom to redesign the curriculum.</h4>
+                <p>
+                    We couldn't pause an in-progress cohort to redesign it and any structural change had
+                    to work within what was already running.
+                </p>
+                <p>
+                    My role was <strong>review, ideation, and testing. That meant my influence had to come through shaping activities
+                    and <em>how</em> we validated it, rather than pushing ideas directly.
+                </p>
+                <p>
+                    And critically: <strong>we a feedback form to know <em>why</em> learners were leaving.</strong>
+                    We had the "when" — week 6–7.
+                </p>
+            </div>
+
+            <div class="case-step tradeoff">
+                <div class="case-step-label"><span class="ico">⚖️</span> The Trade-off</div>
+                <h4>Rebuild the curriculum mid-cohort or instrument first and patch the exact drop-off window?</h4>
+                <p>
+                    The instinct was to overhaul the middle of the program: re-record lessons, restructure
+                    modules, change the schedule. But rebuilding mid-cohort would disrupt the learners who
+                    were <em>still engaged</em> — trading one dropout problem for another.
+                </p>
+                <p>
+                    I argued for the opposite: <strong>instrument the week 6–7 experience specifically</strong>,
+                    find the one or two things that were actually breaking people, and fix only those. Smaller
+                    blast radius, faster signal, and if it worked we'd know exactly why.
+                </p>
+            </div>
+
+            <div class="case-step">
+                <div class="case-step-label"><span class="ico">🎯</span> The Call</div>
+                <h4>Run an A/B test on the exact moment learners lost momentum.</h4>
+                <p>
+                    As part of the Wordpress LMS work, I led ideation and testing on what the week 6–7
+                    experience should look like. Working with the team, we picked a specific, testable change:
+                    the way the platform re-engaged learners entering the second half of the cohort.
+                </p>
+                <p>
+                    We ran an <strong>A/B test</strong> to isolate whether the change was actually moving the
+                    dropout window, or whether we were just adding noise. Not a full redesign — a single,
+                    measurable intervention at the exact moment retention was collapsing.
+                </p>
+            </div>
+
+            <div class="case-step">
+                <div class="case-step-label"><span class="ico">🧪</span> A Separate Experiment That Worked</div>
+                <h4>A/B test: video vs. image on the TechHerFest24 about section.</h4>
+                <p>
+                    Separately, I owned the full lifecycle of the <strong>TechHerFest24 event website</strong> —
+                    ideation, design coordination, build, launch, and post-launch optimization.
+                </p>
+                <p>
+                    On the event site's <em>About</em> section, we were showing a static image from a past event.
+                    I hypothesized that <strong>a video of a past event would convert better</strong> — moving
+                    imagery communicates energy and community in a way a still photo can't. We A/B tested it.
+                </p>
+                <p>
+                    <strong>The video version won on conversions.</strong> Not marginally — meaningfully enough
+                    that it drove more ticket sales for TechHerFest24. The lesson stuck: on event pages, show
+                    the experience, don't just describe it.
+                </p>
+            </div>
+
+            <div class="case-step">
+                <div class="case-step-label"><span class="ico">📈</span> What Happened</div>
+                <h4>+60% learner engagement and +40% event registrations.</h4>
+                <p>
+                    The combined work on the academy and the event platform moved two numbers that mattered:
+                    <strong>learner engagement went up 60%</strong>, and <strong>TechHerFest24 registrations went up 40%</strong>.
+                    The event website launch timeline also pulled in <strong>3 weeks earlier</strong> than originally
+                    scoped, because I front-loaded the content decisions (like the video test) instead of treating
+                    them as afterthoughts.
+                </p>
+                <p>
+                    Beyond the numbers, I mentored <strong>200+ product interns</strong> across cohorts, with 5
+                    moving into full-time product roles — a direct outcome of the same "instrument first,
+                    redesign second" philosophy applied to people, not just products.
+                </p>
+            </div>
+
+            <div class="case-step retro">
+                <div class="case-step-label"><span class="ico">🪞</span> What I'd Do Differently</div>
+                <h4>I would have instrumented week 6–7 from the very first cohort.</h4>
+                <p>
+                    We only saw the cliff clearly <em>after</em> it had already hurt multiple cohorts. If I ran
+                    this again, I'd set up <strong>exit surveys and behavior checkpoints at weeks 4, 6, and 8</strong>
+                    from cohort one — so we'd be reacting to <em>why</em> learners leave, not just <em>when</em>.
+                </p>
+                <p>
+                    The deeper lesson: <strong>in any 12-week program, the middle is where people disappear.</strong>
+                    Weeks 1–3 are momentum, weeks 10–12 are the finish line, weeks 5–8 are where motivation
+                    quietly dies. I'd build product rituals around protecting that middle window — for every
+                    program, not just this one.
+                </p>
+            </div>
+        </div>
+
+        <div class="case-footer">
+            <span class="case-footer-note">Live · hertechtrail.org</span>
+            <a href="https://events.hertechtrail.org/" target="_blank" class="work-link">View live product <span class="btn-arrow">→</span></a>
+        </div>
+    </div>
+</div>
+               <!-- ============ Eko Crib ============ -->
+                <article class="work-card" data-project="ekocrib">
+                    <div class="work-media">
+                        <img src="images/EKOCRIB.jpg" alt="Eko Crib" loading="lazy">
+                    </div>
+                    <div class="work-content">
+                        <span class="work-tag">Real Estate · Web</span>
+                        <h3>Eko Crib</h3>
+                        <p class="work-desc">
+                            Made house-hunting easier for Lagos residents. Beta launched with 200+ signups in two
+                            weeks and a 40% homepage conversion lift.
+                        </p>
+                        <div class="work-decision">
+                            <strong>The decision I'm proudest of</strong>
+                            We cut the "verified listing" feature from the beta on purpose. Proving a listing was
+                            real was hard, expensive, and slow. Instead we shipped a <em>report-this-listing</em>
+                            button and used the first month of reports to design the verification system properly.
+                        </div>
+                        <div class="work-meta">
+                            <span><b>Role:</b> Product Manager / Head of Operations</span>
+                        </div>
+                        <div class="work-outcomes">
+                            <span>200+ signups in 2 weeks</span>
+                            <span>+40% homepage conversion</span>
+                            <span>35% faster iteration</span>
+                        </div>
+                        <div class="work-actions">
+                            <button class="work-link case-toggle" data-target="ekocrib">
+                                How I thought through this <span class="btn-arrow">→</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Eko Crib case study -->
+                <div class="case-panel" id="ekocrib">
+                    <div class="case-inner">
+                        <button class="case-close" aria-label="Close">✕</button>
+                        <div class="case-header">
+                            <span class="eyebrow">Case Study · Eko Crib</span>
+                            <h3>Trust is a feature — but only after you know what people don't trust</h3>
+                            <p>
+                                Eko Crib was our attempt to fix house-hunting in Lagos. The obvious problem was
+                                "too many fake listings." The honest problem was "we didn't yet know which kind
+                                of fake mattered most to users."
+                            </p>
+                        </div>
+
+                        <div class="case-steps">
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🔍</span> The Problem</div>
+                                <h4>House hunters in Lagos weren't struggling to find listings. They were struggling to trust them.</h4>
+                                <p>
+                                    Dozens of real-estate sites existed. Users had stopped using them because listings
+                                    were often duplicates, already-rented, or straight-up fake. The real problem wasn't
+                                    <em>supply</em>. It was <strong>signal</strong>.
+                                </p>
+                            </div>
+
+                            <div class="case-step constraint">
+                                <div class="case-step-label"><span class="ico">🚧</span> The Constraints</div>
+                                <h4>Two weeks to beta. No verification team. No budget for on-the-ground checks.</h4>
+                                <p>
+                                    A "verified listing" feature required physical inspection or a trusted partner
+                                    network. We had neither — and we had <strong>two weeks</strong> before the beta launch.
+                                </p>
+                            </div>
+
+                            <div class="case-step tradeoff">
+                                <div class="case-step-label"><span class="ico">⚖️</span> The Trade-off</div>
+                                <h4>Ship a weak verification system, or ship no verification and instrument the problem?</h4>
+                                <p>
+                                    Weak verification is <em>worse</em> than no verification — it erodes trust twice
+                                    (once when the listing is fake, twice when the "verified" badge turns out to be
+                                    meaningless). I chose the harder path: <strong>ship without verification, and add a
+                                    one-tap "Report this listing" button.</strong> Ugly, but honest.
+                                </p>
+                            </div>
+
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🎯</span> The Call</div>
+                                <h4>Treat the beta as a research instrument, not a product launch.</h4>
+                                <p>
+                                    The beta goal wasn't conversion. It was <strong>to learn which fraud mattered</strong>.
+                                    We tagged every report, categorized it, and interviewed 10 reporters in the first
+                                    week. That data shaped what "verified" should eventually mean — and which
+                                    verification was even worth building.
+                                </p>
+                            </div>
+
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">📈</span> What Happened</div>
+                                <h4>200+ signups, 40% homepage conversion lift, and a much smarter verification roadmap.</h4>
+                                <p>
+                                    Signups beat target. Conversion beat target. But the win that mattered most was
+                                    that we discovered <strong>duplicate listings — not fake ones — were the #1 user
+                                    complaint.</strong> We'd been about to build the wrong verification system.
+                                </p>
+                            </div>
+
+                            <div class="case-step retro">
+                                <div class="case-step-label"><span class="ico">🪞</span> What I'd Do Differently</div>
+                                <h4>I would have interviewed reporters <em>before</em> building the report button.</h4>
+                                <p>
+                                    We learned more from 10 user interviews than from 200 signups. If I ran the beta
+                                    again, I'd <strong>front-load 20 interviews before launch</strong>, not after. The report
+                                    button was a good instrument — but I could have saved a sprint by talking to
+                                    users first and building the button around what they told me.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="case-footer">
+                            <span class="case-footer-note">Beta launched · currently live at ekocrib.com</span>
+                            <a href="https://www.ekocrib.com/" target="_blank" class="work-link">View live product <span class="btn-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ Teket ============ -->
+                <article class="work-card" data-project="teket">
                     <div class="work-media">
                         <img src="images/TEEKET.jpg" alt="Teket — Event Management App" loading="lazy">
                     </div>
@@ -1150,53 +1791,158 @@
                         <p class="work-desc">
                             Developed and launched the MVP of an event management app for early user growth.
                         </p>
+                        <div class="work-decision">
+                            <strong>The decision I'm proudest of</strong>
+                            We resisted building the "discovery" tab that everyone assumed was essential.
+                            Instead we <em>manually curated</em> the first month's events — cheaper, faster,
+                            and it taught us what organizers actually wanted to promote.
+                        </div>
                         <div class="work-meta">
                             <span><b>Role:</b> Associate Product Manager</span>
                         </div>
                         <div class="work-outcomes">
                             <span>+30% early signups</span>
                         </div>
-                        <a href="https://docs.google.com/document/d/1bYCy5Pdb151UgdD-tAw65aEtFC5FY73BhJ-YmA7OAYo/edit?usp=sharing" target="_blank" class="work-link">View Case Study <span class="btn-arrow">→</span></a>
+                        <div class="work-actions">
+                            <button class="work-link case-toggle" data-target="teket">
+                                How I thought through this <span class="btn-arrow">→</span>
+                            </button>
+                            <a href="https://docs.google.com/document/d/1bYCy5Pdb151UgdD-tAw65aEtFC5FY73BhJ-YmA7OAYo/edit?usp=sharing" target="_blank" class="work-link">Full case study <span class="btn-arrow">→</span></a>
+                        </div>
                     </div>
                 </article>
 
-                
+                <!-- Teket case study -->
+                <div class="case-panel" id="teket">
+                    <div class="case-inner">
+                        <button class="case-close" aria-label="Close">✕</button>
+                        <div class="case-header">
+                            <span class="eyebrow">Case Study · Teket</span>
+                            <h3>Doing manually what everyone assumed needed to be built</h3>
+                            <p>
+                                Teket was an event management MVP with a familiar trap: everyone assumed
+                                an event discovery feature was table stakes. It wasn't. Here's how I
+                                talked the team out of building it.
+                            </p>
+                        </div>
+
+                        <div class="case-steps">
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🔍</span> The Problem</div>
+                                <h4>Event organizers wanted distribution. Attendees wanted discovery. The two weren't the same.</h4>
+                                <p>
+                                    The initial pitch was "event discovery app" — but talking to organizers
+                                    revealed something else: they didn't need more listings. They needed
+                                    <strong>curated promotion</strong>. Discovery was a nice-to-have; distribution
+                                    was the job.
+                                </p>
+                            </div>
+
+                            <div class="case-step constraint">
+                                <div class="case-step-label"><span class="ico">🚧</span> The Constraints</div>
+                                <h4>MVP timeline, small team, and no algorithm to rank events fairly.</h4>
+                                <p>
+                                    A "discovery" feature sounds straightforward — until you try to rank events
+                                    without data. An algorithm without signal would have shown the loudest
+                                    events to everyone. <strong>Random-feeling discovery is worse than no discovery.</strong>
+                                </p>
+                            </div>
+
+                            <div class="case-step tradeoff">
+                                <div class="case-step-label"><span class="ico">⚖️</span> The Trade-off</div>
+                                <h4>Build the discovery tab, or manually curate the first month?</h4>
+                                <p>
+                                    Everyone wanted a discovery tab in the MVP. I argued for <strong>a WhatsApp
+                                    curation channel</strong> instead. Slower to scale, uglier to demo — but it
+                                    forced us to talk to organizers weekly, which taught us what discovery
+                                    should actually be.
+                                </p>
+                            </div>
+
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">🎯</span> The Call</div>
+                                <h4>Manual first. Algorithm when you have signal.</h4>
+                                <p>
+                                    We launched with a hand-curated weekly list. Organizers loved it because
+                                    they could <em>tell us</em> what to prioritize. Users loved it because there
+                                    were only 5 events to look at, not 500.
+                                </p>
+                            </div>
+
+                            <div class="case-step">
+                                <div class="case-step-label"><span class="ico">📈</span> What Happened</div>
+                                <h4>+30% early signups — driven by curation, not discovery.</h4>
+                                <p>
+                                    The MVP with 5 curated events per week outperformed the "endless scroll"
+                                    benchmark. Turned out the value was <strong>filtering, not listing</strong>.
+                                    The data we collected fed directly into the eventual discovery feature.
+                                </p>
+                            </div>
+
+                            <div class="case-step retro">
+                                <div class="case-step-label"><span class="ico">🪞</span> What I'd Do Differently</div>
+                                <h4>I would have set an explicit exit date for the manual process.</h4>
+                                <p>
+                                    We agreed to "manual for now" — but "now" lasted longer than it should have.
+                                    If I did it again, I'd <strong>write the exit criteria on day one</strong>:
+                                    "we automate discovery once we have X events and Y attendee responses."
+                                    Manual-as-MVP works only if the manual doesn't become permanent.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="case-footer">
+                            <span class="case-footer-note">MVP launched · full case study available</span>
+                            <a href="https://docs.google.com/document/d/1bYCy5Pdb151UgdD-tAw65aEtFC5FY73BhJ-YmA7OAYo/edit?usp=sharing" target="_blank" class="work-link">Read full case study <span class="btn-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ========== Principles ========== -->
-    <section class="section principles-section" id="principles">
+    <!-- ========== How I Decide (replaces generic principles) ========== -->
+    <section class="section principles-section" id="decide">
         <div class="container">
             <div class="section-head">
-                <span class="eyebrow section-eyebrow">My Product Principles</span>
-                <h2 class="section-title">How I think.</h2>
+                <span class="eyebrow section-eyebrow">How I Decide</span>
+                <h2 class="section-title">The judgment behind the work.</h2>
+                <p class="section-sub">
+                    These aren't mantras. They're decisions I've actually had to make — and the reasoning
+                    behind them.
+                </p>
             </div>
             <div class="principles-list">
                 <div class="principle">
                     <div class="principle-number">01</div>
                     <h3>Start with the problem.</h3>
                     <p>Not the feature.</p>
+                    <p class="example">Eko Crib: Users didn't want more listings — they wanted to trust the ones they saw. That reframed the whole roadmap.</p>
                 </div>
                 <div class="principle">
                     <div class="principle-number">02</div>
                     <h3>Make complexity clear.</h3>
                     <p>Good product work creates clarity.</p>
+                    <p class="example">TruthHub: "Track everything" became "prove visits happened." Simpler, cheaper, more honest.</p>
                 </div>
                 <div class="principle">
                     <div class="principle-number">03</div>
                     <h3>Build the smallest useful thing.</h3>
                     <p>MVP doesn't mean minimum effort.</p>
+                    <p class="example">Socioknack: A manual approval step beat a beautiful rules engine — because it taught us the real rules.</p>
                 </div>
                 <div class="principle">
                     <div class="principle-number">04</div>
                     <h3>Talk to users.</h3>
                     <p>Assumptions are expensive.</p>
+                    <p class="example">Teket: 20 organizer conversations changed what "discovery" meant. Would have guessed wrong without them.</p>
                 </div>
                 <div class="principle">
                     <div class="principle-number">05</div>
                     <h3>Ship. Learn. Improve.</h3>
                     <p>A product isn't finished when it launches.</p>
+                    <p class="example">Sportverse: Reframed the entire product around non-monetary play. Same engine, better audience.</p>
                 </div>
             </div>
         </div>
@@ -1210,8 +1956,9 @@
                     <span class="eyebrow section-eyebrow">Coaching &amp; Mentorship</span>
                     <h2>Building products. Growing people.</h2>
                     <p>
-                        I also help aspiring and transitioning professionals understand Product/Project Management
-                        through practical projects, product thinking, Agile delivery and mentorship.
+                        I also help aspiring and transitioning professionals learn the judgment behind product
+                        decisions — not just the vocabulary. We work through real trade-offs, real constraints,
+                        real messy calls.
                     </p>
                     <ul class="coaching-list">
                         <li>Product/Project Management Coaching</li>
@@ -1219,7 +1966,7 @@
                         <li>Agile &amp; Scrum Fundamentals</li>
                         <li>Practical Product Projects</li>
                     </ul>
-                    <a href="services.html" target="_blank" class="btn btn-primary">Reach out for Coaching/Mentorship <span class="btn-arrow">→</span></a>
+                    <a href="services.html" target="_blank" class="btn btn-primary">Reach out for Coaching <span class="btn-arrow">→</span></a>
                 </div>
                 <div class="coaching-visual">
                     <div class="coaching-stat">
@@ -1317,7 +2064,8 @@
                     <span class="eyebrow section-eyebrow">Contact</span>
                     <h2>Have a problem worth solving?</h2>
                     <p>
-                        Whether you're building a product, improving a workflow or developing your product team, let's talk.
+                        Whether you're building a product, improving a workflow or developing your product team —
+                        bring me the messy version. That's where I'm useful.
                     </p>
                     <div class="contact-direct">
                         <a href="mailto:ukonsisong@gmail.com">
@@ -1376,7 +2124,7 @@
     </footer>
 
     <script>
-        // Smooth scrolling for in-page anchors
+        // ============ Smooth scrolling ============
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -1395,7 +2143,7 @@
             });
         });
 
-        // Mobile menu toggle
+        // ============ Mobile menu ============
         const menuToggle = document.querySelector('.menu-toggle');
         const navList = document.getElementById('nav-list');
         if (menuToggle && navList) {
@@ -1404,7 +2152,7 @@
             });
         }
 
-        // Header scroll state
+        // ============ Header scroll state ============
         const header = document.getElementById('site-header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
@@ -1414,7 +2162,45 @@
             }
         });
 
-        // Contact form submission
+        // ============ Case study toggles ============
+        document.querySelectorAll('.case-toggle').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = btn.getAttribute('data-target');
+                const panel = document.getElementById(id);
+                if (!panel) return;
+
+                const isOpen = panel.classList.contains('open');
+
+                // Close any other open panels first (only one open at a time)
+                document.querySelectorAll('.case-panel.open').forEach(p => {
+                    if (p !== panel) p.classList.remove('open');
+                });
+
+                if (isOpen) {
+    panel.classList.remove('open');
+    btn.innerHTML = 'How I thought through this <span class="btn-arrow">→</span>';
+} else {
+    panel.classList.add('open');
+    btn.innerHTML = 'Hide case study <span class="btn-arrow">↑</span>';
+}
+            });
+        });
+
+        // ============ Close buttons ============
+        document.querySelectorAll('.case-close').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const panel = btn.closest('.case-panel');
+                if (!panel) return;
+                panel.classList.remove('open');
+                // Reset corresponding toggle button text
+                const id = panel.getAttribute('id');
+                const toggle = document.querySelector(`.case-toggle[data-target="${id}"]`);
+                if (toggle) toggle.innerHTML = 'How I thought through this <span class="btn-arrow">→</span>';
+            });
+        });
+
+        // ============ Contact form ============
         const contactForm = document.querySelector('.contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
